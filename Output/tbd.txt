@@ -1,0 +1,3 @@
+speichert hier den Output der Netzwerklösung
+es ist kein bestimmtes Format vorgegeben
+gerne auch Visualisierungen der Lösung am ende oder sogar der einzelnen Schritte
