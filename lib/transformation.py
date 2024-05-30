@@ -25,5 +25,5 @@ for node, x in data['nodes'].items():
         })
 
 # Transformierte Daten speichern
-with open('C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/Netzwerke1/Vorlage_Projekt_Netzwerke/Data/chvatal_small_transformed.json', 'w') as outfile:
+with open('C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/chvatal_small_transformed.json', 'w') as outfile:
     json.dump(data, outfile, indent=4)
