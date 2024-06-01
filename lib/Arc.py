@@ -14,15 +14,14 @@ print(f"The number of nodes is {num_nodes}")
 # Klasse erstellen
 
 class Arc:
-    def __init__(self, from_node, to_node, arc_flow, lower_bound, upper_bound, source = False, target = False):
-        self.from_node = from_node # i
-        self.to_node = to_node # j
-        self.arc_flow = arc_flow # FLow
-        self.lower_bound = lower_bound # Redundant?
-        self.upper_bound = upper_bound
-        self.source = source
-        self.target = target
-
+    def __init__(self, start, end, capacity):
+        self.start = start # i
+        self.end = end # j
+        self.capacity = capacity # Maximal möglicher FLow
+        # self.lower_bound = lower_bound # Redundant?
+        # self.upper_bound = upper_bound
+        self.flow = 0
+        self.return_arc = None
 
 
         # Für FF später

@@ -1,8 +1,7 @@
 class Node:
-    def __init__(self, id, demand):
+    def __init__(self, id, source, target):
         self.id = id
-        self.demand = demand
-        self.edges = []
         self.visited = False # Notwendig?
-        self.cost = 0 # Wahrscheinlich irrelevant
         self.prev = None
+        self.source = source
+        self.target = target
