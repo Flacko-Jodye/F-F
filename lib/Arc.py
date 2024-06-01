@@ -3,7 +3,7 @@
 
 import json
 # Load the data
-with open('C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_chvatal_small.json', 'r') as infile:
+with open('C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_start_end.json', 'r') as infile:
     data = json.load(infile)
 
 # Anzahl der Knoten
@@ -28,3 +28,5 @@ class Arc:
         # Für FF später
         # self.flow = 0
         # self.reverse = None
+
+
