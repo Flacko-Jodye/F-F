@@ -20,15 +20,15 @@ def transform_data(input_file, output_file):
     # Add arcs from source and to sink
     for node, attributes in nodes.items():
         if attributes['demand'] < 0:
-            new_arcs.append({"from": "source", "to": node, "capacity": -attributes['demand']})
+            new_arcs.append({"start": "source", "end": node, "capacity": -attributes['demand']})
         elif attributes['demand'] > 0:
-            new_arcs.append({"from": node, "to": "sink", "capacity": attributes['demand']})
+            new_arcs.append({"start": node, "end": "sink", "capacity": attributes['demand']})
 
     # Add existing arcs without the cost field
     for arc in arcs:
         new_arc = {
-            "from": arc['from'],
-            "to": arc['to'],
+            "start": arc['from'],
+            "end": arc['to'],
             "capacity": arc['upper_bound']
         }
         new_arcs.append(new_arc)
