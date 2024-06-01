@@ -1,29 +1,50 @@
 import json
+import os
 
-data = json.load(open('C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/Netzwerke1/Vorlage_Projekt_Netzwerke/Data/chvatal_small.json'))
+def transform_data(input_file, output_file):
+    with open(input_file, 'r') as infile:
+        data = json.load(infile)
 
-# s und t festlegen
-data['nodes']['source'] = {'demand': 0}
-data['nodes']['target'] = {'demand': 0}
+    # Original nodes and arcs
+    nodes = data['nodes']
+    arcs = data['arcs']
 
-for node, x in data['nodes'].items():
-    if x['demand'] < 0:
-        data['arcs'].append({
-            "from": "source",
-            "to": node,
-            "cost": 0,
-            "lower_bound": 0,
-            "upper_bound": abs(x['demand'])
-        })
-    elif x['demand'] > 0:
-        data['arcs'].append({
-            "from": node,
-            "to": "target",
-            "cost": 0,
-            "lower_bound": 0,
-            "upper_bound": abs(x['demand'])
-        })
+    # Create new nodes dictionary and add source and sink
+    new_nodes = {str(i): {} for i in nodes.keys()}
+    new_nodes['source'] = {}
+    new_nodes['sink'] = {}
 
-# Transformierte Daten speichern
-with open('C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/chvatal_small_transformed.json', 'w') as outfile:
-    json.dump(data, outfile, indent=4)
+    # Create new arcs list and add connections to source and sink
+    new_arcs = []
+
+    # Add arcs from source and to sink
+    for node, attributes in nodes.items():
+        if attributes['demand'] < 0:
+            new_arcs.append({"from": "source", "to": node, "capacity": -attributes['demand']})
+        elif attributes['demand'] > 0:
+            new_arcs.append({"from": node, "to": "sink", "capacity": attributes['demand']})
+
+    # Add existing arcs without the cost field
+    for arc in arcs:
+        new_arc = {
+            "from": arc['from'],
+            "to": arc['to'],
+            "capacity": arc['upper_bound']
+        }
+        new_arcs.append(new_arc)
+
+    # Create the new data dictionary
+    new_data = {
+        "nodes": new_nodes,
+        "arcs": new_arcs
+    }
+
+    # Write the new data to the output file
+    with open(output_file, 'w') as outfile:
+        json.dump(new_data, outfile, indent=4)
+
+if __name__ == "__main__":
+    input_path = r'D:\Fub SS 2024\Metaheurisitk\Maxflowgurobi\Data\chvatal_small.json'
+    output_path = r'D:\Fub SS 2024\Metaheurisitk\Maxflowgurobi\Data\transformed_chvatal_small.json'
+    transform_data(input_path, output_path)
+
