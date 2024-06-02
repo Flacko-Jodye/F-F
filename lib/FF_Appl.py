@@ -4,6 +4,8 @@ from network import Network
 from Arc import Arc
 from Nodes import Node
 from FF import FordFulkerson
+import pickle
+import os
 
 # Load the JSON data
 # data = json.load(open('C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_start_end.json'))
@@ -53,3 +55,14 @@ for arc_data in data["arcs"]:
 # Calculate max flow
 max_flow = FordFulkerson(network)
 print(f"Max flow: {max_flow}")
+
+# Graph abspeichern
+final_network = {
+    "nodes": {node_id: {"source": node.source, "target": node.target} for node_id, node in network.nodes.items()},
+    "arcs": [{"start": arc.start, "end": arc.end, "capacity": arc.capacity, "flow": arc.flow} for arc in network.getArcs()]
+}
+
+output_path = "C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/"
+filename = "chvatal_small_final_network_graph.json"
+with open(os.path.join(output_path, filename), "w") as outfile:
+    json.dump(final_network, outfile)
