@@ -9,6 +9,7 @@
 # - Verhinderung von möglichen overflows
 # - visited token (1 oder true) oder in Nodes
 
+from Arc import Arc
 
 
 class Network:
@@ -21,6 +22,7 @@ class Network:
     #.values von ChatGPT übernommen --> Nochmal recherchieren
     def getSource(self):
         for node in self.nodes.values():
+            print(f"Checking node {node.id}: source={node.source}")  # Debugging
             if node.source == True:
                 return node
         print("Source not found")
@@ -28,6 +30,7 @@ class Network:
     
     def getSink(self):
         for node in self.nodes.values():
+            print(f"Checking node {node.id}: sink ={node.target}")  # Debug statement
             if node.target == True:
                 return node
         print("Target not found")
@@ -48,24 +51,24 @@ class Network:
     #             return node
     #     return False
     
-    def getNodesInNetwork(self):
+    def getNodesInNetwork(self, id):
         return id in self.nodes
 
     def getArcs(self):
         allArcs = []
-        for node in self.network:
-            for arc in self.network[node]:
-                allArcs.append(arc)
+        for arcs in self.network.values():
+            allArcs.extend(arcs)
         return allArcs
 
         
     def getPath(self, start, end, path):
         if start == end:
             return path # Pfad gefunden
-        for arc in self.network.get[start, []]:
+        for arc in self.network.get(start, []):
             residualCapacity = arc.capacity - arc.flow
             if residualCapacity > 0 and not (arc, residualCapacity) in path:
-                result = self. getPath(arc.end, end, path + [(arc, residualCapacity)])
+                print(f"Exploring arc from {arc.start} to {arc.end} with residual capacity {residualCapacity}")
+                result = self.getPath(arc.end, end, path + [(arc, residualCapacity)])
                 if result is not None:
                     return result 
 
