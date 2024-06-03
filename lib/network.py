@@ -33,7 +33,7 @@ class Network:
             print(f"Checking node {node.id}: sink ={node.target}")  # Debug statement
             if node.target == True:
                 return node
-        print("Target not found")
+        print("Sink not found")
         return None
     
     # def getNode(self, id):
@@ -71,28 +71,40 @@ class Network:
                 result = self.getPath(arc.end, end, path + [(arc, residualCapacity)])
                 if result is not None:
                     return result 
+        return None
 
     def addArc(self, start, end, capacity):
     # Hilfefunktionen
+        # if start == end:
+        #     return "Quelle und Senke können nicht identisch sein"
+        # if not self.getNodesInNetwork(start):
+        #     return "Startknoten nicht gefunden"
+        # if not self.getNodesInNetwork(end):
+        #     return "Endknoten nicht gefunden"
         if start == end:
-            return "Quelle und Senke können nicht identisch sein"
+            raise ValueError("Source and sink cannot be the same")
         if not self.getNodesInNetwork(start):
-            return "Startknoten nicht gefunden"
+            raise ValueError(f"Start node {start} not found")
         if not self.getNodesInNetwork(end):
-            return "Endknoten nicht gefunden"
+            raise ValueError(f"End node {end} not found")
+        
         newArc = Arc(start, end, capacity)
         returnArc = Arc(end, start, 0)
         newArc.returnArc = returnArc
         returnArc.returnArc = newArc
+
         if start not in self.network:
             self.network[start] = []
+
         if end not in self.network:
             self.network[end] = []
         node = self.getNode(start) # Startknoten
-        returnNode = self.getNode(end)
+        returnNode = self.getNode(end) # Endknoten
         self.network[node.id].append(newArc)
         self.network[returnNode.id].append(returnArc)  
 
         # ChatGPT Ergänzungen
         self.arcs.append(newArc)
         self.arcs.append(returnArc)
+        print(f"Added arc from {start} to {end} with capacity {capacity}")
+        print(f"Added reverse arc from {end} to {start} with capacity 0")

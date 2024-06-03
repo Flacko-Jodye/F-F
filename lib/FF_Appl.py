@@ -1,11 +1,10 @@
-import requests
 import json
 from network import Network
 from Arc import Arc
 from Nodes import Node
 from FF import FordFulkerson
-import pickle
 import os
+import time
 
 # Load the JSON data
 # data = json.load(open('C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_start_end.json'))
@@ -52,11 +51,25 @@ for node_id in data["nodes"]:
 for arc_data in data["arcs"]:
     network.addArc(arc_data["start"], arc_data["end"], arc_data["capacity"])
 
+# Timer starten
+start_time = time.time()
+
 # Calculate max flow
 max_flow = FordFulkerson(network)
+
+# Timer stoppen
+end_time = time.time()
+
+# Laufzeit berechnen
+running_time = end_time - start_time
+
+# Ergebnisse
 print(f"Max flow: {max_flow}")
+print(f"Laufzeit: {running_time} Sekunden")
+
 
 # Graph abspeichern
+# Kommentare löschen um neuen Graphen zu speichern
 final_network = {
     "nodes": {node_id: {"source": node.source, "target": node.target} for node_id, node in network.nodes.items()},
     "arcs": [{"start": arc.start, "end": arc.end, "capacity": arc.capacity, "flow": arc.flow} for arc in network.getArcs()]
