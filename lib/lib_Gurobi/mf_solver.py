@@ -1,6 +1,6 @@
 import gurobipy as gp
 from gurobipy import GRB
-
+import time
 
 
 
@@ -50,6 +50,8 @@ def solve_mf (nodes, arcs, source, sink):
     model.setObjective(
         gp.quicksum(flow[arc['start'], arc['end']] for arc in arcs if arc['end'] == sink),
         GRB.MAXIMIZE)
+    
+    start_time = time.time()  # gain the start time 
     ############################### Iteration speichern########################################
     def my_callback(model, where):
         if where == GRB.Callback.SIMPLEX:
@@ -62,6 +64,8 @@ def solve_mf (nodes, arcs, source, sink):
 
 
         #########################################################
+    
+   
     '''# Check if the model is infeasible
     if model.status == GRB.Status.INFEASIBLE:
         print('The model is infeasible; computing IIS')
@@ -79,6 +83,12 @@ def solve_mf (nodes, arcs, source, sink):
         ########################################
     # Solve the model with the callback function
     model.optimize(my_callback)
+    end_time = time.time()  # gain the end time
+
+    elapsed_time = end_time - start_time  # calculate the elapsed time
+
+    print(f"Gurobi optimization elapsed time: {elapsed_time:.6f} seconds") # print the elapsed time
+   
 
     if model.status == GRB.OPTIMAL: #GRB.OPTIMAL =" the optimization was successful"
         max_flow = model.objVal
