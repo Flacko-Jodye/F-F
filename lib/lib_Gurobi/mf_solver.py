@@ -65,8 +65,8 @@ def solve_mf (nodes, arcs, source, sink):
 
         #########################################################
     
-   
-    '''# Check if the model is infeasible
+   # Check if the model is infeasible
+    '''
     if model.status == GRB.Status.INFEASIBLE:
         print('The model is infeasible; computing IIS')
 
@@ -92,7 +92,7 @@ def solve_mf (nodes, arcs, source, sink):
 
     if model.status == GRB.OPTIMAL: #GRB.OPTIMAL =" the optimization was successful"
         max_flow = model.objVal
-        flow_values = {arc: flow[arc].X for arc in flow}
+        flow_values = {"arcs": [{"start": arc[0], "end": arc[1], "flow": flow[arc].X, "capacity": flow[arc].ub} for arc in flow]}
                         #  flow[arc].X = flow value of each arc
         return max_flow, flow_values
     else:

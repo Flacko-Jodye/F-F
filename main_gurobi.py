@@ -33,11 +33,11 @@ print(f"Flow values:{flow_values}")
 flow_values_str_keys = {str(key): value for key, value in flow_values.items()}
 
 # Save flow_values to a JSON file
-with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Data\Gurobi_flow_values_NEU.json', 'w') as f:
+with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Data\Gurobi_flow_values_NEU2.json', 'w') as f:
     json.dump(flow_values_str_keys, f)
 
 ##################################################################################################
-# Draw network
+# Draw network(copilot)
 
 G = nx.DiGraph()
 
@@ -45,13 +45,12 @@ G = nx.DiGraph()
 G.add_nodes_from(nodes)
 
 # add arcs and capacity 
-for arc in arcs:
-    G.add_edge(arc['start'], arc['end'], capacity=arc['capacity'])
-
-# flow values
-for (start, end), flow in flow_values.items():
-    G[start][end]['flow'] = flow
-
+for arc in flow_values['arcs']:
+    start = arc['start']
+    end = arc['end']
+    flow = arc['flow']
+    capacity = arc['capacity']
+    G.add_edge(start, end, flow=flow, capacity=capacity)
 
 # Draw
 
@@ -59,11 +58,9 @@ pos = nx.spring_layout(G)  # positions for all nodes
 labels = nx.get_edge_attributes(G, 'capacity')  # capacity of each arc
 flow_labels = nx.get_edge_attributes(G, 'flow')  # flow of each arc
 
-
-
-
 # combine capacity and flow values in one label
-edge_labels = {(u, v): f"({capacity}, {flow})" for (u, v), capacity, flow in zip(G.edges(), labels.values(), flow_labels.values())}
+edge_labels = {(u, v): f"({labels[(u, v)]}, {flow_labels[(u, v)]})" for (u, v) in G.edges()}
+
 
 nx.draw_networkx_nodes(G, pos)  #draw nodes
 nx.draw_networkx_edges(G, pos)  # draw arcs
