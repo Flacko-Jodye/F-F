@@ -1,7 +1,7 @@
 import json
 import networkx as nx
 import matplotlib.pyplot as plt
-from lib import mf_solver
+from lib.lib_Gurobi import mf_solver
 from networkx import bipartite_layout
 import copy
 
@@ -33,7 +33,7 @@ print(f"Flow values:{flow_values}")
 flow_values_str_keys = {str(key): value for key, value in flow_values.items()}
 
 # Save flow_values to a JSON file
-with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Output\Gurobi_Output\flow_values.json', 'w') as f:
+with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Data\Gurobi_flow_values_NEU.json', 'w') as f:
     json.dump(flow_values_str_keys, f)
 
 ##################################################################################################

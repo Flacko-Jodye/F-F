@@ -8,7 +8,7 @@ def solve_mf (nodes, arcs, source, sink):
     model = gp.Model("max_flow")
 
     # Set Gurobi log file
-    model.Params.LogFile = 'gurobi.log'
+    model.Params.LogFile = 'mf_gurobi.log'
     
     # Enable verbose output
     model.Params.OutputFlag = 1
@@ -59,7 +59,7 @@ def solve_mf (nodes, arcs, source, sink):
             obj_val = model.cbGet(GRB.Callback.SPX_OBJVAL)
             print(f"Iteration: {iter_count}, Objective Value: {obj_val}")
             # Write each iteration's information to a file
-            with open("iterations.log", "a") as f:
+            with open("mf_iterations_gurobi.log", "a") as f:
                 f.write(f"Iteration: {iter_count}, Objective Value: {obj_val}\n")
 
 
