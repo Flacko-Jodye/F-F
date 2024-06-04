@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import os
 
 # NOch nicht fertig --> Graph ist sehr unübersichtlich
+    # Welche Status sollte der Graph abbilden?
 # Zu sehr großem Anteil von ChatGPT übernommen; einzelne Teile wurden selber angepasst, um Übersichtlichkeit zu gewährleisten
 
 def visualize_final_graph(input_path="C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/chvatal_small_final_network_graph.json", output_path="Figures/final_graph_small.png"):

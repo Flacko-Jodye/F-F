@@ -12,7 +12,7 @@ def FordFulkerson(network):
         visited = set()
         stack = [(source, [])]
 
-# Stack als Ergänzung
+# Stack als Ergänzung --> ChatGPT Ergänzung
         while stack:
             current_node, path = stack.pop()
             if current_node in visited:
@@ -38,10 +38,11 @@ def FordFulkerson(network):
         path_str = " -> ".join([f"{arc.start}->{arc.end} (Restkapazität: {residual_capacity})" for arc, residual_capacity in path])
         print(f"Flussvergrößernder Pfad gefunden: {path_str} mit Fluss {flow}")
         for arc, _ in path:
-            arc.flow += flow
+            arc.flow += flow # Fluss des Pfads erhöhen
             arc.returnArc.flow -= flow  # Rückwärtskante aktualisieren
             print(f"Aktualisierter Fluss auf Kante von {arc.start} nach {arc.end}: {arc.flow}")
             print(f"Aktualisierter Fluss auf Rückwärtskante von {arc.end} nach {arc.start}: {arc.returnArc.flow}")
+        # Gesamtflow berechnen und ausgeben
         max_flow += flow
         print(f"Aktueller maximaler Fluss: {max_flow}")
         path = flussErhoehen_path(source.id, sink.id)

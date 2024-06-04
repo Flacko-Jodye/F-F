@@ -82,11 +82,11 @@ class Network:
         # if not self.getNodesInNetwork(end):
         #     return "Endknoten nicht gefunden"
         if start == end:
-            raise ValueError("Source and sink cannot be the same")
+            raise ValueError("Quelle und Senke können nicht identisch sein")
         if not self.getNodesInNetwork(start):
-            raise ValueError(f"Start node {start} not found")
+            raise ValueError(f"Startknoten {start} nicht gefunden")
         if not self.getNodesInNetwork(end):
-            raise ValueError(f"End node {end} not found")
+            raise ValueError(f"Endknoten {end} nicht gefunden")
         
         newArc = Arc(start, end, capacity)
         returnArc = Arc(end, start, 0)
@@ -106,5 +106,5 @@ class Network:
         # ChatGPT Ergänzungen
         self.arcs.append(newArc)
         self.arcs.append(returnArc)
-        print(f"Added arc from {start} to {end} with capacity {capacity}")
-        print(f"Added reverse arc from {end} to {start} with capacity 0")
+        print(f"Pfad hinzugefügt von {start} zu {end} mit Kapazität {capacity}")
+        print(f"Pfad hinzugefügt von {end} zu {start} mit Kapazität 0")
