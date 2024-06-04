@@ -43,11 +43,6 @@ for node_id in data["nodes"]:
 #     node = Node(id= node_id, source=source, target=target)
 #     network.nodes[node_id] = node   
 
-
-
-# for arc_data in data["arcs"]:
-#     network.addArc(arc_data["start"], arc_data["end"], arc_data["capacity"])
-
 for arc_data in data["arcs"]:
     network.addArc(arc_data["start"], arc_data["end"], arc_data["capacity"])
 
