@@ -10,6 +10,7 @@ import time
 # data = json.load(open('C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_start_end.json'))
 
 input_path = 'C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_start_end.json'
+# input_path = 'C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_netgen_8_08a.json.json'
 
 # ChatGPT Ergänzung
 try:
@@ -68,7 +69,7 @@ print(f"Laufzeit: {running_time} Sekunden")
 # Kommentare löschen um neuen Graphen zu speichern
 final_network = {
     "nodes": {node_id: {"source": node.source, "target": node.target} for node_id, node in network.nodes.items()},
-    "arcs": [{"start": arc.start, "end": arc.end, "Kapazität": arc.capacity, "flow": arc.flow} for arc in network.getArcs()]
+    "arcs": [{"start": arc.start, "end": arc.end, "capacity": arc.capacity, "flow": arc.flow} for arc in network.getArcs()]
 }
 
 output_path = "C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/"

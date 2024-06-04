@@ -10,6 +10,9 @@ import os
 def visualize_final_graph(input_path="C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/chvatal_small_final_network_graph.json", output_path="Figures/final_graph_small.png"):
     with open(input_path, "r") as infile:
         data = json.load(infile)
+# def visualize_final_graph(input_path="C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_netgen_8_08a.json", output_path="Figures/final_graph_Big.png"):
+#     with open(input_path, "r") as infile:
+#         data = json.load(infile)
 
     G = nx.DiGraph()
 
