@@ -11,6 +11,7 @@ import time
 
 input_path = 'C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_start_end.json'
 
+# ChatGPT Ergänzung
 try:
     with open(input_path, 'r') as infile:
         data = json.load(infile)
@@ -18,7 +19,7 @@ except FileNotFoundError:
     print(f"File not found: {input_path}")
     exit(1)
 
-# Create a network
+# Netzwerk erstellen
 network = Network()
 
 # CHatGPT Alternative
@@ -31,12 +32,12 @@ for node_id in data["nodes"]:
 
 
 "Alte Version"
-# # Add nodes to the network
+# # Knoten hinzufügen
 # for node_data in data["nodes"]:
 #     node = Node(node_data, node_data)
 #     network.addNode(node)
 
-# # Add arcs to the network
+# # Pfade dem Netzwerk hinzufügen
 # for node_id in data["node"]:
 #     source = (node_id == "source")
 #     target = (node_id == "sink")
@@ -67,7 +68,7 @@ print(f"Laufzeit: {running_time} Sekunden")
 # Kommentare löschen um neuen Graphen zu speichern
 final_network = {
     "nodes": {node_id: {"source": node.source, "target": node.target} for node_id, node in network.nodes.items()},
-    "arcs": [{"start": arc.start, "end": arc.end, "capacity": arc.capacity, "flow": arc.flow} for arc in network.getArcs()]
+    "arcs": [{"start": arc.start, "end": arc.end, "Kapazität": arc.capacity, "flow": arc.flow} for arc in network.getArcs()]
 }
 
 output_path = "C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/"
