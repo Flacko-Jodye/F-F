@@ -19,7 +19,7 @@ if __name__ == '__main__':
     network_input.load_data_from_txt_file(settings.get_data_path())
     print('Done')
     print('Start creating Network...')
-    network = Network(network_input)
+    network = Network()
     print('Done')
     print('Start solving MinCostFlow...')
     if settings.get_solver_method() ==  'XX':
