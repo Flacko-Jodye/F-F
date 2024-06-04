@@ -69,7 +69,7 @@ def solve_mcf (nodes, arcs, start_solution):
 
     if model.status == GRB.OPTIMAL: #GRB.OPTIMAL =" the optimization was successful"
         min_cost = model.objVal
-        flow_values = {arc: flow[arc].X for arc in flow}
+        flow_values = {"arcs": [{"start": arc[0], "end": arc[1], "flow": flow[arc].X, "capacity": flow[arc].ub} for arc in flow]}
                         #  flow[arc].X = flow value of each arc
         return min_cost, flow_values
     # Return the flow values

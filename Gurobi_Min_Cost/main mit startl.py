@@ -21,10 +21,17 @@ arcs = data['arcs']
 
 
 # Load the start solution
-with open(r"D:\Fub SS 2024\Metaheurisitk\Min-Cost-Problem-Gurobi\Data\flow_values.json", 'r') as f:
+with open(r"D:\Fub SS 2024\Metaheurisitk\F-F\Data\Gurobi_mf_values_small.json", 'r') as f:
+    data = json.load(f)
+
+start_solution = { (arc['start'], arc['end']): arc['flow'] for arc in data['arcs'] }
+
+#alte
+'''with open(r"D:\Fub SS 2024\Metaheurisitk\Min-Cost-Problem-Gurobi\Data\flow_values.json", 'r') as f:
     start_solution = json.load(f)
 
 start_solution = {ast.literal_eval(arc): flow for arc, flow in start_solution.items()} # Convert string tuples real tuples
+'''
 
 # Problem solution
 min_cost, flow_values = mcf_solver_mit_Startl.solve_mcf(nodes, arcs, start_solution)
@@ -38,7 +45,7 @@ print(f"Flow values:{flow_values}")
 flow_values_str_keys = {str(key): value for key, value in flow_values.items()}
 
 # Save flow_values to a JSON file
-with open(r'D:\Fub SS 2024\Metaheurisitk\Min-Cost-Problem-Gurobi\mc_flow_values_mit.json', 'w') as f:
+with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Gurobi_Min_Cost\Output\mc_small_values_mit.json', 'w') as f:
     json.dump(flow_values_str_keys, f)
 
 ##################################################################################################
@@ -54,9 +61,12 @@ for arc in arcs:
     G.add_edge(arc['from'], arc['to'], capacity=arc['upper_bound'])
 
 # flow values
-for (start, end), flow in flow_values.items():
-    G[start][end]['flow'] = flow
-
+for arc in flow_values['arcs']:
+    start = arc['start']
+    end = arc['end']
+    flow = arc['flow']
+    capacity = arc['capacity']
+    G.add_edge(start, end, flow=flow, capacity=capacity)
 
 # Draw
 
@@ -64,12 +74,8 @@ pos = nx.spring_layout(G)  # positions for all nodes
 labels = nx.get_edge_attributes(G, 'capacity')  # capacity of each arc
 flow_labels = nx.get_edge_attributes(G, 'flow')  # flow of each arc
 
-
-
-
 # combine capacity and flow values in one label
-edge_labels = {(u, v): f"({capacity}, {flow})" for (u, v), capacity, flow in zip(G.edges(), labels.values(), flow_labels.values())}
-plt.text(1, 0.05, f'Min Cost: {min_cost}', horizontalalignment='right', verticalalignment='bottom', transform=plt.gca().transAxes)
+edge_labels = {(u, v): f"({labels[(u, v)]}, {flow_labels[(u, v)]})" for (u, v) in G.edges()}
 
 nx.draw_networkx_nodes(G, pos)  #draw nodes
 nx.draw_networkx_edges(G, pos)  # draw arcs
