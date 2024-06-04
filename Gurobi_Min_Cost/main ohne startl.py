@@ -9,7 +9,7 @@ import copy
 
 
 # open JSON file
-with open(r'D:\Fub SS 2024\Metaheurisitk\Min-Cost-Problem-Gurobi\Data\chvatal_small.json','r') as f:
+with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Data\netgen_8_08a.json','r') as f:
     data = json.load(f)
 
 print(data.keys())
@@ -34,7 +34,7 @@ print(f"Flow values:{flow_values}")
 flow_values_str_keys = {str(key): value for key, value in flow_values.items()}
 
 # Save flow_values to a JSON file
-with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Gurobi_Min_Cost\Output\mc_flow_values_ohne.json', 'w') as f:
+with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Gurobi_Min_Cost\Output\mc_08values_ohne.json', 'w') as f:
     json.dump(flow_values_str_keys, f)
 
 ##################################################################################################

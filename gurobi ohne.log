@@ -54,3 +54,87 @@ Iteration    Objective       Primal Inf.    Dual Inf.      Time
 
 Solved in 6 iterations and 0.00 seconds (0.00 work units)
 Optimal objective  5.600000000e+01
+
+Gurobi 11.0.2 (win64) logging started Tue Jun  4 16:08:49 2024
+
+Set parameter LogFile to value "gurobi ohne.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+Gurobi Optimizer version 11.0.2 build v11.0.2rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 256 rows, 2048 columns and 4096 nonzeros
+Model fingerprint: 0x14ca8f73
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [5e+00, 1e+04]
+  Bounds range     [1e+00, 2e+03]
+  RHS range        [9e+01, 3e+03]
+Presolve time: 0.00s
+Presolved: 256 rows, 2048 columns, 4096 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.9196940e+07   3.574500e+04   0.000000e+00      0s
+     217    1.4227454e+08   0.000000e+00   0.000000e+00      0s
+
+Solved in 217 iterations and 0.01 seconds (0.00 work units)
+Optimal objective  1.422745360e+08
+
+Gurobi 11.0.2 (win64) logging started Tue Jun  4 20:38:20 2024
+
+Set parameter LogFile to value "gurobi ohne.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+Gurobi Optimizer version 11.0.2 build v11.0.2rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 256 rows, 2048 columns and 4096 nonzeros
+Model fingerprint: 0x14ca8f73
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [5e+00, 1e+04]
+  Bounds range     [1e+00, 2e+03]
+  RHS range        [9e+01, 3e+03]
+Presolve time: 0.00s
+Presolved: 256 rows, 2048 columns, 4096 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.9196940e+07   3.574500e+04   0.000000e+00      0s
+     217    1.4227454e+08   0.000000e+00   0.000000e+00      0s
+
+Solved in 217 iterations and 0.01 seconds (0.00 work units)
+Optimal objective  1.422745360e+08
+
+Gurobi 11.0.2 (win64) logging started Tue Jun  4 20:46:36 2024
+
+Set parameter LogFile to value "gurobi ohne.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+Gurobi Optimizer version 11.0.2 build v11.0.2rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 256 rows, 2048 columns and 4096 nonzeros
+Model fingerprint: 0x14ca8f73
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [5e+00, 1e+04]
+  Bounds range     [1e+00, 2e+03]
+  RHS range        [9e+01, 3e+03]
+Presolve time: 0.00s
+Presolved: 256 rows, 2048 columns, 4096 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.9196940e+07   3.574500e+04   0.000000e+00      0s
+     217    1.4227454e+08   0.000000e+00   0.000000e+00      0s
+
+Solved in 217 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.422745360e+08

@@ -1,0 +1,359 @@
+Initialized node 1: source=False, target=False
+Initialized node 2: source=False, target=False
+Initialized node 3: source=False, target=False
+Initialized node 4: source=False, target=False
+Initialized node 5: source=False, target=False
+Initialized node 6: source=False, target=False
+Initialized node source: source=True, target=False
+Initialized node sink: source=False, target=True
+Checking node 1: source=False
+Checking node 2: source=False
+Checking node 3: source=False
+Checking node 4: source=False
+Checking node 5: source=False
+Checking node 6: source=False
+Checking node source: source=True
+Checking node 1: sink =False
+Checking node 2: sink =False
+Checking node 3: sink =False
+Checking node 4: sink =False
+Checking node 5: sink =False
+Checking node 6: sink =False
+Checking node source: sink =False
+Checking node sink: sink =True
+Exploring arc from source to 1 with residual capacity 9
+Exploring arc from 1 to 2 with residual capacity 2
+Exploring arc from 2 to sink with residual capacity 4
+Augmenting path found: [(<Arc.Arc object at 0x000001E3FA688790>, 9), (<Arc.Arc object at 0x000001E3FA688A50>, 2), (<Arc.Arc object at 0x000001E3FA6887D0>, 4)] with flow 2
+Updated flow on arc from source to 1: 2
+Updated flow on arc from 1 to 2: 2
+Updated flow on arc from 2 to sink: 2
+Exploring arc from source to 1 with residual capacity 7
+Exploring arc from 1 to source with residual capacity 2
+Exploring arc from source to 5 with residual capacity 5
+Exploring arc from 5 to 3 with residual capacity 9
+Exploring arc from 3 to sink with residual capacity 17
+Augmenting path found: [(<Arc.Arc object at 0x000001E3FA688790>, 7), (<Arc.Arc object at 0x000001E3FA688590>, 2), (<Arc.Arc object at 0x000001E3FA688990>, 5), (<Arc.Arc object at 0x000001E3FA688D50>, 9), (<Arc.Arc object at 0x000001E3FA688850>, 17)] with flow 2
+Updated flow on arc from source to 1: 4
+Updated flow on arc from 1 to source: -2
+Updated flow on arc from source to 5: 2
+Updated flow on arc from 5 to 3: 2
+Updated flow on arc from 3 to sink: 2
+Exploring arc from source to 1 with residual capacity 7
+Exploring arc from 1 to source with residual capacity 2
+Exploring arc from source to 5 with residual capacity 3
+Exploring arc from 5 to source with residual capacity 2
+Exploring arc from source to 6 with residual capacity 8
+Exploring arc from 6 to 2 with residual capacity 7
+Exploring arc from 2 to sink with residual capacity 2
+Augmenting path found: [(<Arc.Arc object at 0x000001E3FA688790>, 7), (<Arc.Arc object at 0x000001E3FA688590>, 2), (<Arc.Arc object at 0x000001E3FA688990>, 3), (<Arc.Arc object at 0x000001E3FA6889D0>, 2), (<Arc.Arc object at 0x000001E3FA6888D0>, 8), (<Arc.Arc object at 0x000001E3FA688F50>, 7), (<Arc.Arc object at 0x000001E3FA6887D0>, 2)] with flow 2
+Updated flow on arc from source to 1: 4
+Updated flow on arc from 1 to source: -2
+Updated flow on arc from source to 5: 4
+Updated flow on arc from 5 to source: -2
+Updated flow on arc from source to 6: 2
+Updated flow on arc from 6 to 2: 2
+Updated flow on arc from 2 to sink: 4
+Exploring arc from source to 1 with residual capacity 7
+Exploring arc from 1 to source with residual capacity 2
+Exploring arc from source to 5 with residual capacity 3
+Exploring arc from 5 to source with residual capacity 2
+Exploring arc from source to 6 with residual capacity 6
+Exploring arc from 6 to source with residual capacity 2
+Exploring arc from 6 to 2 with residual capacity 5
+Exploring arc from 2 to 1 with residual capacity 2
+Exploring arc from 1 to 3 with residual capacity 10
+Exploring arc from 3 to sink with residual capacity 15
+Augmenting path found: [(<Arc.Arc object at 0x000001E3FA688790>, 7), (<Arc.Arc object at 0x000001E3FA688590>, 2), (<Arc.Arc object at 0x000001E3FA688990>, 3), (<Arc.Arc object at 0x000001E3FA6889D0>, 2), (<Arc.Arc object at 0x000001E3FA6888D0>, 6), (<Arc.Arc object at 0x000001E3FA688F50>, 5), (<Arc.Arc object at 0x000001E3FA688A90>, 2), (<Arc.Arc object at 0x000001E3FA688AD0>, 10), (<Arc.Arc object at 0x000001E3FA688850>, 15)] with flow 2
+Updated flow on arc from source to 1: 4
+Updated flow on arc from 1 to source: -2
+Updated flow on arc from source to 5: 4
+Updated flow on arc from 5 to source: -2
+Updated flow on arc from source to 6: 4
+Updated flow on arc from 6 to 2: 4
+Updated flow on arc from 2 to 1: 0
+Updated flow on arc from 1 to 3: 2
+Updated flow on arc from 3 to sink: 4
+Exploring arc from source to 1 with residual capacity 7
+Exploring arc from 1 to source with residual capacity 2
+Exploring arc from source to 5 with residual capacity 3
+Exploring arc from 5 to source with residual capacity 2
+Exploring arc from source to 6 with residual capacity 4
+Exploring arc from 6 to source with residual capacity 4
+Exploring arc from 6 to 2 with residual capacity 3
+Exploring arc from 2 to 3 with residual capacity 6
+Exploring arc from 3 to sink with residual capacity 13
+Augmenting path found: [(<Arc.Arc object at 0x000001E3FA688790>, 7), (<Arc.Arc object at 0x000001E3FA688590>, 2), (<Arc.Arc object at 0x000001E3FA688990>, 3), (<Arc.Arc object at 0x000001E3FA6889D0>, 2), (<Arc.Arc object at 0x000001E3FA6888D0>, 4), (<Arc.Arc object at 0x000001E3FA688F50>, 3), (<Arc.Arc object at 0x000001E3FA688BD0>, 6), (<Arc.Arc object at 0x000001E3FA688850>, 13)] with flow 2
+Updated flow on arc from source to 1: 4
+Updated flow on arc from 1 to source: -2
+Updated flow on arc from source to 5: 4
+Updated flow on arc from 5 to source: -2
+Updated flow on arc from source to 6: 6
+Updated flow on arc from 6 to 2: 6
+Updated flow on arc from 2 to 3: 2
+Updated flow on arc from 3 to sink: 6
+Exploring arc from source to 1 with residual capacity 7
+Exploring arc from 1 to source with residual capacity 2
+Exploring arc from source to 5 with residual capacity 3
+Exploring arc from 5 to source with residual capacity 2
+Exploring arc from source to 6 with residual capacity 2
+Exploring arc from 6 to source with residual capacity 6
+Exploring arc from 6 to 2 with residual capacity 1
+Exploring arc from 2 to 3 with residual capacity 4
+Exploring arc from 3 to sink with residual capacity 11
+Augmenting path found: [(<Arc.Arc object at 0x000001E3FA688790>, 7), (<Arc.Arc object at 0x000001E3FA688590>, 2), (<Arc.Arc object at 0x000001E3FA688990>, 3), (<Arc.Arc object at 0x000001E3FA6889D0>, 2), (<Arc.Arc object at 0x000001E3FA6888D0>, 2), (<Arc.Arc object at 0x000001E3FA688F50>, 1), (<Arc.Arc object at 0x000001E3FA688BD0>, 4), (<Arc.Arc object at 0x000001E3FA688850>, 11)] with flow 1
+Updated flow on arc from source to 1: 3
+Updated flow on arc from 1 to source: -2
+Updated flow on arc from source to 5: 3
+Updated flow on arc from 5 to source: -2
+Updated flow on arc from source to 6: 7
+Updated flow on arc from 6 to 2: 7
+Updated flow on arc from 2 to 3: 3
+Updated flow on arc from 3 to sink: 7
+Exploring arc from source to 1 with residual capacity 7
+Exploring arc from 1 to source with residual capacity 2
+Exploring arc from source to 5 with residual capacity 3
+Exploring arc from 5 to source with residual capacity 2
+Exploring arc from source to 6 with residual capacity 1
+Exploring arc from 6 to source with residual capacity 7
+Exploring arc from 6 to 4 with residual capacity 8
+Exploring arc from 4 to sink with residual capacity 1
+Augmenting path found: [(<Arc.Arc object at 0x000001E3FA688790>, 7), (<Arc.Arc object at 0x000001E3FA688590>, 2), (<Arc.Arc object at 0x000001E3FA688990>, 3), (<Arc.Arc object at 0x000001E3FA6889D0>, 2), (<Arc.Arc object at 0x000001E3FA6888D0>, 1), (<Arc.Arc object at 0x000001E3FA689010>, 8), (<Arc.Arc object at 0x000001E3FA688910>, 1)] with flow 1
+Updated flow on arc from source to 1: 3
+Updated flow on arc from 1 to source: -2
+Updated flow on arc from source to 5: 3
+Updated flow on arc from 5 to source: -2
+Updated flow on arc from source to 6: 8
+Updated flow on arc from 6 to 4: 1
+Updated flow on arc from 4 to sink: 1
+Exploring arc from source to 1 with residual capacity 7
+Exploring arc from 1 to source with residual capacity 2
+Exploring arc from source to 5 with residual capacity 3
+Exploring arc from 5 to source with residual capacity 2
+Exploring arc from 5 to 3 with residual capacity 7
+Exploring arc from 3 to sink with residual capacity 10
+Augmenting path found: [(<Arc.Arc object at 0x000001E3FA688790>, 7), (<Arc.Arc object at 0x000001E3FA688590>, 2), (<Arc.Arc object at 0x000001E3FA688990>, 3), (<Arc.Arc object at 0x000001E3FA688D50>, 7), (<Arc.Arc object at 0x000001E3FA688850>, 10)] with flow 2
+Updated flow on arc from source to 1: 4
+Updated flow on arc from 1 to source: -2
+Updated flow on arc from source to 5: 4
+Updated flow on arc from 5 to 3: 4
+Updated flow on arc from 3 to sink: 9
+Exploring arc from source to 1 with residual capacity 7
+Exploring arc from 1 to source with residual capacity 2
+Exploring arc from source to 5 with residual capacity 1
+Exploring arc from 5 to source with residual capacity 4
+Exploring arc from 5 to 3 with residual capacity 5
+Exploring arc from 3 to sink with residual capacity 8
+Augmenting path found: [(<Arc.Arc object at 0x000001E3FA688790>, 7), (<Arc.Arc object at 0x000001E3FA688590>, 2), (<Arc.Arc object at 0x000001E3FA688990>, 1), (<Arc.Arc object at 0x000001E3FA688D50>, 5), (<Arc.Arc object at 0x000001E3FA688850>, 8)] with flow 1
+Updated flow on arc from source to 1: 3
+Updated flow on arc from 1 to source: -2
+Updated flow on arc from source to 5: 5
+Updated flow on arc from 5 to 3: 5
+Updated flow on arc from 3 to sink: 10
+Exploring arc from source to 1 with residual capacity 7
+Exploring arc from 1 to source with residual capacity 2
+Exploring arc from 1 to 2 with residual capacity 2
+Exploring arc from 2 to 3 with residual capacity 3
+Exploring arc from 3 to sink with residual capacity 7
+Augmenting path found: [(<Arc.Arc object at 0x000001E3FA688790>, 7), (<Arc.Arc object at 0x000001E3FA688A50>, 2), (<Arc.Arc object at 0x000001E3FA688BD0>, 3), (<Arc.Arc object at 0x000001E3FA688850>, 7)] with flow 2
+Updated flow on arc from source to 1: 4
+Updated flow on arc from 1 to 2: 2
+Updated flow on arc from 2 to 3: 5
+Updated flow on arc from 3 to sink: 12
+Exploring arc from source to 1 with residual capacity 5
+Exploring arc from 1 to source with residual capacity 4
+Exploring arc from 1 to 3 with residual capacity 8
+Exploring arc from 3 to sink with residual capacity 5
+Augmenting path found: [(<Arc.Arc object at 0x000001E3FA688790>, 5), (<Arc.Arc object at 0x000001E3FA688AD0>, 8), (<Arc.Arc object at 0x000001E3FA688850>, 5)] with flow 5
+Updated flow on arc from source to 1: 9
+Updated flow on arc from 1 to 3: 7
+Updated flow on arc from 3 to sink: 17
+FInale Max-FLow-Kapa der Quelle beträgt: 22
+Max flow: 22
+___________________________________________________________________________________________________________________________________________________________________________________________________
+
+
+
+
+
+
+
+
+# Neuere Version:
+
+Initialized node 1: source=False, target=False
+Initialized node 2: source=False, target=False
+Initialized node 3: source=False, target=False
+Initialized node 4: source=False, target=False
+Initialized node 5: source=False, target=False
+Initialized node 6: source=False, target=False
+Initialized node source: source=True, target=False
+Initialized node sink: source=False, target=True
+Added arc from source to 1 with capacity 9
+Added reverse arc from 1 to source with capacity 0
+Added arc from 2 to sink with capacity 4
+Added reverse arc from sink to 2 with capacity 0
+Added arc from 3 to sink with capacity 17
+Added reverse arc from sink to 3 with capacity 0
+Added arc from 4 to sink with capacity 1
+Added reverse arc from sink to 4 with capacity 0
+Added arc from source to 5 with capacity 5
+Added reverse arc from 5 to source with capacity 0
+Added arc from source to 6 with capacity 8
+Added reverse arc from 6 to source with capacity 0
+Added arc from 1 to 2 with capacity 2
+Added reverse arc from 2 to 1 with capacity 0
+Added arc from 1 to 3 with capacity 10
+Added reverse arc from 3 to 1 with capacity 0
+Added arc from 1 to 5 with capacity 10
+Added reverse arc from 5 to 1 with capacity 0
+Added arc from 2 to 3 with capacity 6
+Added reverse arc from 3 to 2 with capacity 0
+Added arc from 4 to 2 with capacity 8
+Added reverse arc from 2 to 4 with capacity 0
+Added arc from 4 to 3 with capacity 9
+Added reverse arc from 3 to 4 with capacity 0
+Added arc from 5 to 3 with capacity 9
+Added reverse arc from 3 to 5 with capacity 0
+Added arc from 5 to 4 with capacity 10
+Added reverse arc from 4 to 5 with capacity 0
+Added arc from 5 to 6 with capacity 6
+Added reverse arc from 6 to 5 with capacity 0
+Added arc from 6 to 2 with capacity 7
+Added reverse arc from 2 to 6 with capacity 0
+Added arc from 6 to 4 with capacity 8
+Added reverse arc from 4 to 6 with capacity 0
+Checking node 1: source=False
+Checking node 2: source=False
+Checking node 3: source=False
+Checking node 4: source=False
+Checking node 5: source=False
+Checking node 6: source=False
+Checking node source: source=True
+Checking node 1: sink =False
+Checking node 2: sink =False
+Checking node 3: sink =False
+Checking node 4: sink =False
+Checking node 5: sink =False
+Checking node 6: sink =False
+Checking node source: sink =False
+Checking node sink: sink =True
+Pfad zur Senke gefunden: source->6 (Restkapazität: 8) -> 6->4 (Restkapazität: 8) -> 4->sink (Restkapazität: 1)
+Flussvergrößernder Pfad gefunden: source->6 (Restkapazität: 8) -> 6->4 (Restkapazität: 8) -> 4->sink (Restkapazität: 1) mit Fluss 1
+Aktualisierter Fluss auf Kante von source nach 6: 1
+Aktualisierter Fluss auf Rückwärtskante von 6 nach source: -1
+Aktualisierter Fluss auf Kante von 6 nach 4: 1
+Aktualisierter Fluss auf Rückwärtskante von 4 nach 6: -1
+Aktualisierter Fluss auf Kante von 4 nach sink: 1
+Aktualisierter Fluss auf Rückwärtskante von sink nach 4: -1
+Aktueller maximaler Fluss: 1
+Pfad zur Senke gefunden: source->6 (Restkapazität: 7) -> 6->4 (Restkapazität: 7) -> 4->3 (Restkapazität: 9) -> 3->sink (Restkapazität: 17)
+Flussvergrößernder Pfad gefunden: source->6 (Restkapazität: 7) -> 6->4 (Restkapazität: 7) -> 4->3 (Restkapazität: 9) -> 3->sink (Restkapazität: 17) mit Fluss 7
+Aktualisierter Fluss auf Kante von source nach 6: 8
+Aktualisierter Fluss auf Rückwärtskante von 6 nach source: -8
+Aktualisierter Fluss auf Kante von 6 nach 4: 8
+Aktualisierter Fluss auf Rückwärtskante von 4 nach 6: -8
+Aktualisierter Fluss auf Kante von 4 nach 3: 7
+Aktualisierter Fluss auf Rückwärtskante von 3 nach 4: -7
+Aktualisierter Fluss auf Kante von 3 nach sink: 7
+Aktualisierter Fluss auf Rückwärtskante von sink nach 3: -7
+Aktueller maximaler Fluss: 8
+Pfad zur Senke gefunden: source->5 (Restkapazität: 5) -> 5->6 (Restkapazität: 6) -> 6->2 (Restkapazität: 7) -> 2->sink (Restkapazität: 4)
+Flussvergrößernder Pfad gefunden: source->5 (Restkapazität: 5) -> 5->6 (Restkapazität: 6) -> 6->2 (Restkapazität: 7) -> 2->sink (Restkapazität: 4) mit Fluss 4
+Aktualisierter Fluss auf Kante von source nach 5: 4
+Aktualisierter Fluss auf Rückwärtskante von 5 nach source: -4
+Aktualisierter Fluss auf Kante von 5 nach 6: 4
+Aktualisierter Fluss auf Rückwärtskante von 6 nach 5: -4
+Aktualisierter Fluss auf Kante von 6 nach 2: 4
+Aktualisierter Fluss auf Rückwärtskante von 2 nach 6: -4
+Aktualisierter Fluss auf Kante von 2 nach sink: 4
+Aktualisierter Fluss auf Rückwärtskante von sink nach 2: -4
+Aktueller maximaler Fluss: 12
+Pfad zur Senke gefunden: source->5 (Restkapazität: 1) -> 5->6 (Restkapazität: 2) -> 6->2 (Restkapazität: 3) -> 2->3 (Restkapazität: 6) -> 3->sink (Restkapazität: 10)
+Flussvergrößernder Pfad gefunden: source->5 (Restkapazität: 1) -> 5->6 (Restkapazität: 2) -> 6->2 (Restkapazität: 3) -> 2->3 (Restkapazität: 6) -> 3->sink (Restkapazität: 10) mit Fluss 1
+Aktualisierter Fluss auf Kante von source nach 5: 5
+Aktualisierter Fluss auf Rückwärtskante von 5 nach source: -5
+Aktualisierter Fluss auf Kante von 5 nach 6: 5
+Aktualisierter Fluss auf Rückwärtskante von 6 nach 5: -5
+Aktualisierter Fluss auf Kante von 6 nach 2: 5
+Aktualisierter Fluss auf Rückwärtskante von 2 nach 6: -5
+Aktualisierter Fluss auf Kante von 2 nach 3: 1
+Aktualisierter Fluss auf Rückwärtskante von 3 nach 2: -1
+Aktualisierter Fluss auf Kante von 3 nach sink: 8
+Aktualisierter Fluss auf Rückwärtskante von sink nach 3: -8
+Aktueller maximaler Fluss: 13
+Pfad zur Senke gefunden: source->1 (Restkapazität: 9) -> 1->5 (Restkapazität: 10) -> 5->6 (Restkapazität: 1) -> 6->2 (Restkapazität: 2) -> 2->3 (Restkapazität: 5) -> 3->sink (Restkapazität: 9)
+Flussvergrößernder Pfad gefunden: source->1 (Restkapazität: 9) -> 1->5 (Restkapazität: 10) -> 5->6 (Restkapazität: 1) -> 6->2 (Restkapazität: 2) -> 2->3 (Restkapazität: 5) -> 3->sink (Restkapazität: 9) mit Fluss 1
+Aktualisierter Fluss auf Kante von source nach 1: 1
+Aktualisierter Fluss auf Rückwärtskante von 1 nach source: -1
+Aktualisierter Fluss auf Kante von 1 nach 5: 1
+Aktualisierter Fluss auf Rückwärtskante von 5 nach 1: -1
+Aktualisierter Fluss auf Kante von 5 nach 6: 6
+Aktualisierter Fluss auf Rückwärtskante von 6 nach 5: -6
+Aktualisierter Fluss auf Kante von 6 nach 2: 6
+Aktualisierter Fluss auf Rückwärtskante von 2 nach 6: -6
+Aktualisierter Fluss auf Kante von 2 nach 3: 2
+Aktualisierter Fluss auf Rückwärtskante von 3 nach 2: -2
+Aktualisierter Fluss auf Kante von 3 nach sink: 9
+Aktualisierter Fluss auf Rückwärtskante von sink nach 3: -9
+Aktueller maximaler Fluss: 14
+Pfad zur Senke gefunden: source->1 (Restkapazität: 8) -> 1->5 (Restkapazität: 9) -> 5->4 (Restkapazität: 10) -> 4->6 (Restkapazität: 8) -> 6->2 (Restkapazität: 1) -> 2->3 (Restkapazität: 4) -> 3->sink (Restkapazität: 8)
+Flussvergrößernder Pfad gefunden: source->1 (Restkapazität: 8) -> 1->5 (Restkapazität: 9) -> 5->4 (Restkapazität: 10) -> 4->6 (Restkapazität: 8) -> 6->2 (Restkapazität: 1) -> 2->3 (Restkapazität: 4) -> 3->sink (Restkapazität: 8) mit Fluss 1
+Aktualisierter Fluss auf Kante von source nach 1: 2
+Aktualisierter Fluss auf Rückwärtskante von 1 nach source: -2
+Aktualisierter Fluss auf Kante von 1 nach 5: 2
+Aktualisierter Fluss auf Rückwärtskante von 5 nach 1: -2
+Aktualisierter Fluss auf Kante von 5 nach 4: 1
+Aktualisierter Fluss auf Rückwärtskante von 4 nach 5: -1
+Aktualisierter Fluss auf Kante von 4 nach 6: -7
+Aktualisierter Fluss auf Rückwärtskante von 6 nach 4: 7
+Aktualisierter Fluss auf Kante von 6 nach 2: 7
+Aktualisierter Fluss auf Rückwärtskante von 2 nach 6: -7
+Aktualisierter Fluss auf Kante von 2 nach 3: 3
+Aktualisierter Fluss auf Rückwärtskante von 3 nach 2: -3
+Aktualisierter Fluss auf Kante von 3 nach sink: 10
+Aktualisierter Fluss auf Rückwärtskante von sink nach 3: -10
+Aktueller maximaler Fluss: 15
+Pfad zur Senke gefunden: source->1 (Restkapazität: 7) -> 1->5 (Restkapazität: 8) -> 5->4 (Restkapazität: 9) -> 4->3 (Restkapazität: 2) -> 3->sink (Restkapazität: 7)
+Flussvergrößernder Pfad gefunden: source->1 (Restkapazität: 7) -> 1->5 (Restkapazität: 8) -> 5->4 (Restkapazität: 9) -> 4->3 (Restkapazität: 2) -> 3->sink (Restkapazität: 7) mit Fluss 2
+Aktualisierter Fluss auf Kante von source nach 1: 4
+Aktualisierter Fluss auf Rückwärtskante von 1 nach source: -4
+Aktualisierter Fluss auf Kante von 1 nach 5: 4
+Aktualisierter Fluss auf Rückwärtskante von 5 nach 1: -4
+Aktualisierter Fluss auf Kante von 5 nach 4: 3
+Aktualisierter Fluss auf Rückwärtskante von 4 nach 5: -3
+Aktualisierter Fluss auf Kante von 4 nach 3: 9
+Aktualisierter Fluss auf Rückwärtskante von 3 nach 4: -9
+Aktualisierter Fluss auf Kante von 3 nach sink: 12
+Aktualisierter Fluss auf Rückwärtskante von sink nach 3: -12
+Aktueller maximaler Fluss: 17
+Pfad zur Senke gefunden: source->1 (Restkapazität: 5) -> 1->5 (Restkapazität: 6) -> 5->4 (Restkapazität: 7) -> 4->2 (Restkapazität: 8) -> 2->3 (Restkapazität: 3) -> 3->sink (Restkapazität: 5)
+Flussvergrößernder Pfad gefunden: source->1 (Restkapazität: 5) -> 1->5 (Restkapazität: 6) -> 5->4 (Restkapazität: 7) -> 4->2 (Restkapazität: 8) -> 2->3 (Restkapazität: 3) -> 3->sink (Restkapazität: 5) mit Fluss 3
+Aktualisierter Fluss auf Kante von source nach 1: 7
+Aktualisierter Fluss auf Rückwärtskante von 1 nach source: -7
+Aktualisierter Fluss auf Kante von 1 nach 5: 7
+Aktualisierter Fluss auf Rückwärtskante von 5 nach 1: -7
+Aktualisierter Fluss auf Kante von 5 nach 4: 6
+Aktualisierter Fluss auf Rückwärtskante von 4 nach 5: -6
+Aktualisierter Fluss auf Kante von 4 nach 2: 3
+Aktualisierter Fluss auf Rückwärtskante von 2 nach 4: -3
+Aktualisierter Fluss auf Kante von 2 nach 3: 6
+Aktualisierter Fluss auf Rückwärtskante von 3 nach 2: -6
+Aktualisierter Fluss auf Kante von 3 nach sink: 15
+Aktualisierter Fluss auf Rückwärtskante von sink nach 3: -15
+Aktueller maximaler Fluss: 20
+Pfad zur Senke gefunden: source->1 (Restkapazität: 2) -> 1->5 (Restkapazität: 3) -> 5->3 (Restkapazität: 9) -> 3->sink (Restkapazität: 2)
+Flussvergrößernder Pfad gefunden: source->1 (Restkapazität: 2) -> 1->5 (Restkapazität: 3) -> 5->3 (Restkapazität: 9) -> 3->sink (Restkapazität: 2) mit Fluss 2
+Aktualisierter Fluss auf Kante von source nach 1: 9
+Aktualisierter Fluss auf Rückwärtskante von 1 nach source: -9
+Aktualisierter Fluss auf Kante von 1 nach 5: 9
+Aktualisierter Fluss auf Rückwärtskante von 5 nach 1: -9
+Aktualisierter Fluss auf Kante von 5 nach 3: 2
+Aktualisierter Fluss auf Rückwärtskante von 3 nach 5: -2
+Aktualisierter Fluss auf Kante von 3 nach sink: 17
+Aktualisierter Fluss auf Rückwärtskante von sink nach 3: -17
+Aktueller maximaler Fluss: 22
+Kein flussvergrößernder Pfad gefunden
+Endgültiger maximaler Fluss: 22
+Max flow: 22
+Laufzeit: 0.011291742324829102 Sekunden
