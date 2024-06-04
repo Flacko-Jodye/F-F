@@ -9,7 +9,7 @@ import copy
 
 
 # open JSON file
-with open(r'D:\Fub SS 2024\Metaheurisitk\Min-Cost-Problem-Gurobi\Data\chvatal_small.json','r') as f:
+with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Data\chvatal_small.json','r') as f:
     data = json.load(f)
 
 print(data.keys())
@@ -21,7 +21,7 @@ arcs = data['arcs']
 
 
 # Load the start solution
-with open(r"D:\Fub SS 2024\Metaheurisitk\F-F\Data\Gurobi_mf_values_small.json", 'r') as f:
+with open(r"D:\Fub SS 2024\Metaheurisitk\F-F\Data\chvatal_small_final_network_graph.json", 'r') as f:
     data = json.load(f)
 
 start_solution = { (arc['start'], arc['end']): arc['flow'] for arc in data['arcs'] }
@@ -45,7 +45,7 @@ print(f"Flow values:{flow_values}")
 flow_values_str_keys = {str(key): value for key, value in flow_values.items()}
 
 # Save flow_values to a JSON file
-with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Gurobi_Min_Cost\Output\mc_small_values_mit.json', 'w') as f:
+with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Gurobi_Min_Cost\Output\mc_ff_chvatal_small_network_graph', 'w') as f:
     json.dump(flow_values_str_keys, f)
 
 ##################################################################################################
