@@ -44,7 +44,7 @@ def transform_data(input_file, output_file):
         json.dump(new_data, outfile, indent=4)
 
 if __name__ == "__main__":
-    input_path = r'D:\Fub SS 2024\Metaheurisitk\Maxflowgurobi\Data\chvatal_small.json'
-    output_path = r'D:\Fub SS 2024\Metaheurisitk\Maxflowgurobi\Data\transformed_chvatal_small.json'
+    input_path = r'D:\Fub SS 2024\Metaheurisitk\F-F\Data\netgen_8_08a.json'
+    output_path = r'D:\Fub SS 2024\Metaheurisitk\F-F\Data\transformed_netgen_8_08a.json.json'
     transform_data(input_path, output_path)
 

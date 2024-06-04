@@ -7,7 +7,7 @@ import copy
 
 
 # open JSON file
-with open(r'D:\Fub SS 2024\Metaheurisitk\Maxflowgurobi\Data\transformed_chvatal_small.json','r') as f:
+with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Data\transformed_netgen_8_08a.json.json','r') as f:
     data = json.load(f)
 
 print(data.keys())
@@ -33,7 +33,7 @@ print(f"Flow values:{flow_values}")
 flow_values_str_keys = {str(key): value for key, value in flow_values.items()}
 
 # Save flow_values to a JSON file
-with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Data\Gurobi_flow_values_NEU2.json', 'w') as f:
+with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Data\mf_gurobi_netgen_8_08a.json.json', 'w') as f:
     json.dump(flow_values_str_keys, f)
 
 ##################################################################################################
