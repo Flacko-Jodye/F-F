@@ -7,7 +7,7 @@ import copy
 
 
 # open JSON file
-with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Data\transformed_netgen_8_08a.json.json','r') as f:
+with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Data\transformed_start_end.json','r') as f:
     data = json.load(f)
 
 print(data.keys())
@@ -32,9 +32,9 @@ print(f"Flow values:{flow_values}")
 ##### save flow values to a JSON file    
 flow_values_str_keys = {str(key): value for key, value in flow_values.items()}
 
-# Save flow_values to a JSON file
+'''# Save flow_values to a JSON file
 with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Data\mf_gurobi_netgen_8_08a.json.json', 'w') as f:
-    json.dump(flow_values_str_keys, f)
+    json.dump(flow_values_str_keys, f)'''
 
 ##################################################################################################
 # Draw network(copilot)
@@ -59,7 +59,9 @@ labels = nx.get_edge_attributes(G, 'capacity')  # capacity of each arc
 flow_labels = nx.get_edge_attributes(G, 'flow')  # flow of each arc
 
 # combine capacity and flow values in one label
-edge_labels = {(u, v): f"({labels[(u, v)]}, {flow_labels[(u, v)]})" for (u, v) in G.edges()}
+
+edge_labels = {(u, v): f"{flow}/ {capacity}" for (u, v), capacity, flow in zip(G.edges(), labels.values(), flow_labels.values())}
+
 
 
 nx.draw_networkx_nodes(G, pos)  #draw nodes
@@ -68,7 +70,7 @@ nx.draw_networkx_labels(G, pos)  # draw labels for nodes
 nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels)  # draw edge labels
 
 # Add a text annotation at the bottom right
-plt.text(1, 0, '(Capacity, Flow)', horizontalalignment='right', verticalalignment='bottom', transform=plt.gca().transAxes)
+plt.text(1, 0, 'Flow/Capacity', horizontalalignment='right', verticalalignment='bottom', transform=plt.gca().transAxes)
 
 
 plt.show()  # display
@@ -91,7 +93,7 @@ labels = nx.get_edge_attributes(G2, 'capacity')  # capacity of each arc
 flow_labels = nx.get_edge_attributes(G2, 'flow')  # flow of each arc
 
 # combine capacity and flow values in one label
-edge_labels = {(u, v): f"({capacity}, {flow})" for (u, v), capacity, flow in zip(G2.edges(), labels.values(), flow_labels.values())}
+edge_labels = {(u, v): f"{flow}/ {capacity}" for (u, v), capacity, flow in zip(G2.edges(), labels.values(), flow_labels.values())}
 
 nx.draw_networkx_nodes(G2, pos)  #draw nodes
 nx.draw_networkx_edges(G2, pos)  # draw arcs
@@ -99,7 +101,7 @@ nx.draw_networkx_labels(G2, pos)  # draw labels for nodes
 nx.draw_networkx_edge_labels(G2, pos, edge_labels=edge_labels)  # draw edge labels
 
 # Add a text annotation at the bottom right
-plt.text(1, 0, '(Capacity, Flow)', horizontalalignment='right', verticalalignment='bottom', transform=plt.gca().transAxes)
+plt.text(1, 0, 'Flow/Capacity', horizontalalignment='right', verticalalignment='bottom', transform=plt.gca().transAxes)
 
 plt.show()  # display
 
