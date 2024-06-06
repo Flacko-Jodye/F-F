@@ -7,7 +7,7 @@ import os
     # Welche Status sollte der Graph abbilden?
 # Zu sehr großem Anteil von ChatGPT übernommen; einzelne Teile wurden selber angepasst, um Übersichtlichkeit zu gewährleisten
 
-def visualize_final_graph(input_path=r"D:\Fub SS 2024\Metaheurisitk\F-F\Data\netgen_8_08a_small_final_network_graph.json"):
+def visualize_final_graph(input_path=r"D:\Fub SS 2024\Metaheurisitk\F-F\Data\BFSchvatal_small_final_network_graph.json"):
     with open(input_path, "r") as infile:
         data = json.load(infile)
 # def visualize_final_graph(input_path="C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_netgen_8_08a.json", output_path="Figures/final_graph_Big.png"):
