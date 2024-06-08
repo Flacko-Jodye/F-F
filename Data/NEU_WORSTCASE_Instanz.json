@@ -1,0 +1,35 @@
+{
+  "nodes": {
+      "source": {},
+      "A": {},
+      "B": {},
+      "sink": {}
+  },
+  "arcs": [
+      {
+          "start": "source",
+          "end": "A",
+          "capacity": 1000
+      },
+      {
+          "start": "A",
+          "end": "B",
+          "capacity": 1
+      },
+      {
+          "start": "source",
+          "end": "B",
+          "capacity": 1000
+      },
+      {
+        "start": "A",
+        "end": "sink",
+        "capacity": 1000
+    },
+      {
+          "start": "B",
+          "end": "sink",
+          "capacity": 1000
+      }
+  ]
+}

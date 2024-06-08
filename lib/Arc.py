@@ -3,7 +3,7 @@
 
 import json
 # Load the data
-with open('C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_start_end.json', 'r') as infile:
+with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Data\Neuneuinstanz.json', 'r') as infile:
     data = json.load(infile)
 
 # # Anzahl der Knoten

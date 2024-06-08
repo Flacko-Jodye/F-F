@@ -75,6 +75,3 @@ def solve_mcf (nodes, arcs, start_solution):
     # Return the flow values
     else:
         raise Exception("No optimal solution found")
-
-
-    
