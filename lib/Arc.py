@@ -6,10 +6,10 @@ import json
 with open('C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_start_end.json', 'r') as infile:
     data = json.load(infile)
 
-# Anzahl der Knoten
-num_nodes = len(data['nodes'])
+# # Anzahl der Knoten
+# num_nodes = len(data['nodes'])
 
-print(f"The number of nodes is {num_nodes}")
+# print(f"The number of nodes is {num_nodes}")
 
 # Klasse erstellen
 
