@@ -7,12 +7,12 @@ import os
     # Welche Status sollte der Graph abbilden?
 # Zu sehr großem Anteil von ChatGPT übernommen; einzelne Teile wurden selber angepasst, um Übersichtlichkeit zu gewährleisten
 
-def visualize_final_graph(input_path=r"D:\Fub SS 2024\Metaheurisitk\F-F\Data\netgen_8_08a_small_final_network_graph.json"):
-    with open(input_path, "r") as infile:
-        data = json.load(infile)
-# def visualize_final_graph(input_path="C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_netgen_8_08a.json", output_path="Figures/final_graph_Big.png"):
+# def visualize_final_graph(input_path=r"D:\Fub SS 2024\Metaheurisitk\F-F\Data\netgen_8_08a_small_final_network_graph.json"):
 #     with open(input_path, "r") as infile:
 #         data = json.load(infile)
+def visualize_final_graph(input_path= r"C:\Users\fabia\OneDrive\Dokumente\Master_FU\Semester 2\Netzwerke\F&F\F-F\Data\transformed_start_end.json", output_path="Fabian_Figures_/final_graph_Big.png"):
+    with open(input_path, "r") as infile:
+        data = json.load(infile)
 
     G = nx.DiGraph()
 
@@ -26,7 +26,7 @@ def visualize_final_graph(input_path=r"D:\Fub SS 2024\Metaheurisitk\F-F\Data\net
    
 
     # Positioning nodes: source on the left, sink on the right, others in the middle
-    pos = nx.spring_layout(G, seed=42, k=1)
+    pos = nx.kamada_kawai_layout(G)
 
     # Fixing the positions of source and sink
     fixed_positions = {}
