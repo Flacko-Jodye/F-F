@@ -62,34 +62,6 @@ def solve_mf (nodes, arcs, source, sink):
             with open("mf_iterations_gurobi.log", "a") as f:
                 f.write(f"Iteration: {iter_count}, Objective Value: {obj_val}\n")
 
-
-        #########################################################
-    
-   # Check if the model is infeasible
-    '''
-    if model.status == GRB.Status.INFEASIBLE:
-        print('The model is infeasible; computing IIS')
-
-    # Compute IIS
-    model.computeIIS()
-    print('\nThe following constraint(s) cannot be satisfied:')
-    for c in model.getConstrs():
-        if c.IISConstr:
-            print('%s' % c.constrName)
-    
-    
-
-    '''
-        ########################################
-    # Solve the model with the callback function
-    model.optimize(my_callback)
-    end_time = time.time()  # gain the end time
-
-    elapsed_time = end_time - start_time  # calculate the elapsed time
-
-    print(f"Gurobi optimization elapsed time: {elapsed_time:.6f} seconds") # print the elapsed time
-   
-
     if model.status == GRB.OPTIMAL: #GRB.OPTIMAL =" the optimization was successful"
         max_flow = model.objVal
         flow_values = {"arcs": [{"start": arc[0], "end": arc[1], "flow": flow[arc].X, "capacity": flow[arc].ub} for arc in flow]}

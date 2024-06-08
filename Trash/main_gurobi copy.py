@@ -12,7 +12,6 @@ with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Data\transformed_start_end.json','r
 
 print(data.keys())
 
-
 # extract nodes and arcs
 nodes_dic = data['nodes']
 arcs = data['arcs']
