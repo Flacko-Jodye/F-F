@@ -9,7 +9,7 @@ import time
 # Load the JSON data
 # data = json.load(open('C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_start_end.json'))
 
-input_path = r'D:\Fub SS 2024\Metaheurisitk\F-F\Data\NEU_Instanz.json'
+input_path = r'D:\Fub SS 2024\Metaheurisitk\F-F\Data\transformed_netgen_8_08a.json.json'
 # input_path = 'C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_netgen_8_08a.json.json'
 
 # ChatGPT Ergänzung
@@ -85,10 +85,20 @@ with open(os.path.join(output_path, filename), "w") as outfile:
 
 
 
+import psutil
+import os
+
+# 获取当前进程的 PID
+pid = os.getpid()
+
+# 创建一个 Process 对象
+p = psutil.Process(pid)
+
+# 获取 CPU 使用率
+cpu_usage = p.cpu_percent(interval=1)
 
 
-
-
+print(f"CPU usage: {cpu_usage}%")
 
 
 
