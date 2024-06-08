@@ -32,7 +32,8 @@ def visualise_final_graph(input_path="C:/Users/fabia/OneDrive/Dokumente/Master_F
     # Knoten zeichnen
     normale_nodes = [node for node in G.nodes if node not in [source_node, sink_node]]
     nx.draw_networkx_nodes(G, pos, nodelist=normale_nodes, node_size=700, node_color="white", edgecolors="black")
-    nx.draw_networkx_nodes(G, pos, nodelist=[source_node], node_size=700, node_color="lightgreen", edgecolors="black")
+    # nx.draw_networkx_nodes(G, pos, nodelist=[source_node], node_size=700, node_color="lightgreen", edgecolors="black")
+    nx.draw_networkx_nodes(G, pos, nodelist=[source_node], node_size=700, node_color="white", edgecolors="black")
     nx.draw_networkx_nodes(G, pos, nodelist=[sink_node], node_size=700, node_color="#f1807e", edgecolors="black")
     
     # nx.draw_networkx_nodes(G, pos, node_size=700, node_color="white", edgecolors="black")

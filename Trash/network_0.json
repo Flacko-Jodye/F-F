@@ -1,0 +1,1 @@
+{"nodes": {"source": {"source": true, "target": false}, "A": {"source": false, "target": false}, "B": {"source": false, "target": false}, "sink": {"source": false, "target": true}}, "arcs": [{"start": "source", "end": "A", "capacity": 1000, "flow": 1000}, {"start": "A", "end": "sink", "capacity": 1000, "flow": 1000}], "augmenting_path": [["source", "B"], ["B", "sink"]]}
