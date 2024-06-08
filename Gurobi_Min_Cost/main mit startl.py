@@ -39,7 +39,7 @@ print(f"Flow values:{flow_values}")
 flow_values_str_keys = {str(key): value for key, value in flow_values.items()}
 
 # Save flow_values to a JSON file
-with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Gurobi_Min_Cost\Output\mc_ff_chvatal_small_network_graph.json', 'w') as f:
+with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Gurobi_Min_Cost\Output\Output_mit_Startl\mc_ff_chvatal_small_network_graph.json', 'w') as f:
     json.dump(flow_values_str_keys, f)
 
 ##################################################################################################
@@ -69,7 +69,7 @@ labels = nx.get_edge_attributes(G, 'capacity')  # capacity of each arc
 flow_labels = nx.get_edge_attributes(G, 'flow')  # flow of each arc
 
 # combine capacity and flow values in one label
-edge_labels = {(u, v): f"{flow_labels[(u, v)]}/{labels[(u, v)]} )" for (u, v) in G.edges()}
+edge_labels = {(u, v): f"{flow_labels[(u, v)]}/{labels[(u, v)]} " for (u, v) in G.edges()}
 
 nx.draw_networkx_nodes(G, pos)  #draw nodes
 nx.draw_networkx_edges(G, pos)  # draw arcs

@@ -34,7 +34,7 @@ print(f"Flow values:{flow_values}")
 flow_values_str_keys = {str(key): value for key, value in flow_values.items()}
 
 # Save flow_values to a JSON file
-with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Gurobi_Min_Cost\Output\mc_08values_ohne.json', 'w') as f:
+with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Data\netgen_8_08a_small_final_network_graph.json', 'w') as f:
     json.dump(flow_values_str_keys, f)
 
 ##################################################################################################
@@ -73,7 +73,7 @@ nx.draw_networkx_labels(G, pos)  # draw labels for nodes
 nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels)  # draw edge labels
 
 # Add a text annotation at the bottom right
-plt.text(1, 0, '(Capacity, Flow)', horizontalalignment='right', verticalalignment='bottom', transform=plt.gca().transAxes)
+plt.text(1, 0, 'Flow/Capacity', horizontalalignment='right', verticalalignment='bottom', transform=plt.gca().transAxes)
 
 
 plt.show()  # display
