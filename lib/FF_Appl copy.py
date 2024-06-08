@@ -9,7 +9,7 @@ import time
 # Load the JSON data
 # data = json.load(open('C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_start_end.json'))
 
-input_path = r'D:\Fub SS 2024\Metaheurisitk\F-F\Data\transformed_netgen_8_08a.json.json'
+input_path = r'Data/NEU_WORSTCASE_Instanz.json'
 # input_path = 'C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_netgen_8_08a.json.json'
 
 # ChatGPT Ergänzung
@@ -54,7 +54,7 @@ start_time = time.time()
 # Max flow berechnen / # Iteration abspeichern für Visualisierung
 #output_dir = r"D:\Fub SS 2024\Metaheurisitk\F-F\Trash"
 output_dir = r"D:\Fub SS 2024\Metaheurisitk\F-F\Trash"
-max_flow = FordFulkerson(network, output_dir)
+max_flow = FordFulkerson(network,   output_dir)
 
 # Timer stoppen
 end_time = time.time()

@@ -3,7 +3,7 @@
 
 import json
 # Load the data
-with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Data\NEU_Instanz.json', 'r') as infile:
+with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Data\Neuneuinstanz.json', 'r') as infile:
     data = json.load(infile)
 
 # Anzahl der Knoten
