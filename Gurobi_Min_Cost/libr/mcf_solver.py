@@ -36,30 +36,9 @@ def solve_mcf (nodes, arcs):
         GRB.MINIMIZE)
     #minimize sum (flow*cost)
 
-    '''start_time = time.time()  # gain the start time'''
-
-############################### Iteration speichern########################################
-    '''def my_callback(model, where):
-        if where == GRB.Callback.SIMPLEX:
-            iter_count = model.cbGet(GRB.Callback.SPX_ITRCNT)
-            obj_val = model.cbGet(GRB.Callback.SPX_OBJVAL)
-            print(f"Iteration: {iter_count}, Objective Value: {obj_val}")
-            # Write each iteration's information to a file
-            with open("iterations.log", "a") as f:
-                f.write(f"Iteration: {iter_count}, Objective Value: {obj_val}\n")
-    '''
-
-        #########################################################
 
     # Solve the model
     model.optimize()#my_callback
-
-    '''end_time = time.time()  # gain the end time
-
-    elapsed_time = end_time - start_time  # calculate the elapsed time
-
-    print(f"Gurobi optimization elapsed time: {elapsed_time:.6f} seconds") # print the elapsed time
-    '''
 
     if model.status == GRB.OPTIMAL: #GRB.OPTIMAL =" the optimization was successful"
         min_cost = model.objVal

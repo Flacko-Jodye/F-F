@@ -54,7 +54,7 @@ start_time = time.time()
 # Max flow berechnen / # Iteration abspeichern für Visualisierung
 #output_dir = r"D:\Fub SS 2024\Metaheurisitk\F-F\Trash"
 output_dir = r"D:\Fub SS 2024\Metaheurisitk\F-F\Trash"
-max_flow = FordFulkerson(network, output_dir)
+max_flow = FordFulkerson(network)
 
 # Timer stoppen
 end_time = time.time()
