@@ -2,7 +2,7 @@ import json
 from network import Network
 from Arc import Arc
 from Nodes import Node
-from FF_BFS import FordFulkerson
+from FF import FordFulkerson
 import os
 import time
 
@@ -54,7 +54,7 @@ start_time = time.time()
 # Max flow berechnen / # Iteration abspeichern für Visualisierung
 #output_dir = r"D:\Fub SS 2024\Metaheurisitk\F-F\Trash"
 output_dir = r"D:\Fub SS 2024\Metaheurisitk\F-F\Trash"
-max_flow = FordFulkerson(network)
+max_flow = FordFulkerson(network, output_dir)
 
 # Timer stoppen
 end_time = time.time()
