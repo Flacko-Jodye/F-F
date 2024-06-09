@@ -32,20 +32,6 @@ for node_id in data["nodes"]:
     print(f"Initialized node {node.id}: source={node.source}, target={node.target}")
     network.nodes[node_id] = node
 
-
-"Alte Version"
-# # Knoten hinzufügen
-# for node_data in data["nodes"]:
-#     node = Node(node_data, node_data)
-#     network.addNode(node)
-
-# # Pfade dem Netzwerk hinzufügen
-# for node_id in data["node"]:
-#     source = (node_id == "source")
-#     target = (node_id == "sink")
-#     node = Node(id= node_id, source=source, target=target)
-#     network.nodes[node_id] = node   
-
 for arc_data in data["arcs"]:
     network.addArc(arc_data["start"], arc_data["end"], arc_data["capacity"])
 
@@ -59,10 +45,12 @@ memory_info_start = process.memory_info()
 
 # Kernauslastung tracken
 core_usages = []
+timestamps = []
 
 # Kerne tracken
 def log_core_usage():
     core_usages.append(psutil.cpu_percent(interval=None, percpu=True))
+    timestamps.append(time.time())
 
 # Max flow berechnen
 max_flow = FordFulkerson_Debug(network, log_core_usage)
@@ -85,11 +73,25 @@ memory_usage = process.memory_info().rss
 # Ergebnisse
 print(f"Max flow: {max_flow}")
 print(f"Laufzeit: {running_time} Sekunden")
+
+physical_cores = psutil.cpu_count(logical=False)
+logical_cores = psutil.cpu_count(logical=True)
+
+print(f"Number of physical cores: {physical_cores}")
+print(f"Number of logical cores: {logical_cores}")
+
 print(f"CPU Auslastung: {cpu_auslastung}%")
 print(f"Speicherverbrauch: {memory_usage / (1024*1024):.2f} MB")
+
+core_usage_data = {
+    "timestamps": timestamps,
+    "core_usages": core_usages,
+    "physical_cores": physical_cores,
+    "logical_cores": logical_cores
+}
 
 # Kernauslastung abspeichern
 core_usage_path = "C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/Kernauslastung/Auslastung_Debug.json"
 with open(core_usage_path, "w") as outfile:
-    json.dump(core_usages, outfile)
+    json.dump(core_usage_data, outfile)
 print(f"Kernauslastung abgespeichert unter {core_usage_path}")

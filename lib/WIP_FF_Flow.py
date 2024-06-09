@@ -61,10 +61,12 @@ memory_info_start = process.memory_info()
 
 # Kernauslastung tracken
 core_usages = []
+timestamps = []
 
 # Kerne tracken
 def log_core_usage():
     core_usages.append(psutil.cpu_percent(interval=None, percpu=True))
+    timestamps.append(time.time())
 
 # Max flow berechnen
 max_flow = FordFulkerson_Flow(network, log_core_usage)
@@ -90,11 +92,25 @@ process = process.memory_info().rss # "????"
 # Ergebnisse
 print(f"Max flow: {max_flow}")
 print(f"Laufzeit: {running_time} Sekunden")
+
+physical_cores = psutil.cpu_count(logical=False)
+logical_cores = psutil.cpu_count(logical=True)
+
+print(f"Number of physical cores: {physical_cores}")
+print(f"Number of logical cores: {logical_cores}")
+
 print(f"CPU Auslastung: {cpu_auslastung}%")
 print(f"Speicherverbrauch: {memory_usage / (1024*1024):.2f} MB")
+
+core_usage_data = {
+    "timestamps": timestamps,
+    "core_usages": core_usages,
+    "physical_cores": physical_cores,
+    "logical_cores": logical_cores
+}
 
 # Kernauslastung abspeichern
 core_usage_path = "C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/Kernauslastung/Auslastung_Flow.json"
 with open(core_usage_path, "w") as outfile:
-    json.dump(core_usages, outfile)
+    json.dump(core_usage_data, outfile)
 print(f"Kernauslastung abgespeichert unter {core_usage_path}")
