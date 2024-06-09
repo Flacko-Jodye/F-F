@@ -74,13 +74,22 @@ running_time = end_time - start_time
 # Ergebnisse
 print(f"Max flow: {max_flow}")
 print(f"Laufzeit: {running_time} Sekunden")
+
+physical_cores = psutil.cpu_count(logical=False)
+logical_cores = psutil.cpu_count(logical=True)
+
+print(f"Number of physical cores: {physical_cores}")
+print(f"Number of logical cores: {logical_cores}")
+
 print(f"CPU Auslastung: {cpu_auslastung}%")
 print(f"Speicherverbrauch: {memory_usage / (1024*1024):.2f} MB")
 
 
 core_usage_data = {
     "timestamps": timestamps,
-    "core_usages": core_usages
+    "core_usages": core_usages,
+    "physical_cores": physical_cores,
+    "logical_cores": logical_cores
 }
 
 # Graph abspeichern
