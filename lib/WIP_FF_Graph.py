@@ -54,6 +54,8 @@ def log_core_usage():
 output_dir = "C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/iterations"
 max_flow = FordFulkerson_Graph(network, output_dir, log_core_usage)
 
+
+max_flow, iterations, s_cut, t_cut = FordFulkerson_Graph(network, log_core_usage, output_dir)
 # Timer stoppen
 end_time = time.time()
 
@@ -74,6 +76,9 @@ running_time = end_time - start_time
 # Ergebnisse
 print(f"Max flow: {max_flow}")
 print(f"Laufzeit: {running_time} Sekunden")
+
+print(f"Number of iterations: {iterations}")
+print(f"s-t cut: s-cut = {s_cut}, t-cut = {t_cut}")
 
 physical_cores = psutil.cpu_count(logical=False)
 logical_cores = psutil.cpu_count(logical=True)
