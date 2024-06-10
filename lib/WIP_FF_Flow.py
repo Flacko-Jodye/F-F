@@ -14,7 +14,8 @@ import psutil
 # data = json.load(open('C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_start_end.json'))
 
 # input_path = 'C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_start_end.json'
-input_path = 'C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_netgen_8_08a.json.json'
+# input_path = 'C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_netgen_8_08a.json.json'
+input_path = "C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_netgen_8_13a.json"
 
 # ChatGPT Ergänzung
 try:
@@ -69,7 +70,7 @@ def log_core_usage():
     timestamps.append(time.time())
 
 # Max flow berechnen
-max_flow = FordFulkerson_Flow(network, log_core_usage)
+max_flow, iterations, s_cut, t_cut = FordFulkerson_Flow(network, log_core_usage)
 
 # Timer stoppen / Laufzeit
 end_time = time.time()
@@ -92,6 +93,9 @@ process = process.memory_info().rss # "????"
 # Ergebnisse
 print(f"Max flow: {max_flow}")
 print(f"Laufzeit: {running_time} Sekunden")
+
+print(f"Number of iterations: {iterations}")
+print(f"s-t cut: s-cut = {s_cut}, t-cut = {t_cut}")
 
 physical_cores = psutil.cpu_count(logical=False)
 logical_cores = psutil.cpu_count(logical=True)

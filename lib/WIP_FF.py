@@ -11,6 +11,21 @@ from Nodes import Node
 import json
 import os
 
+# s-t-Schnitt ausgeben
+def find_st_cut(network, source):
+    visited = set()
+    stack = [source]
+    while stack:
+        node = stack.pop()
+        if node not in visited:
+            visited.add(node)
+            for arc in network.network[node]:
+                if arc.capacity - arc.flow > 0 and arc.end not in visited:
+                    stack.append(arc.end)
+    return visited
+
+
+
 def FordFulkerson_Flow(network, log_core_usage):
     source = network.getSource()
     sink = network.getSink()
@@ -37,6 +52,7 @@ def FordFulkerson_Flow(network, log_core_usage):
         return None
 
     max_flow = 0
+    iterations = 0 # Iterationen zählen
     path = flussErhoehen_path(source.id, sink.id)
     while path is not None:
         flow = min(residual_capacity for arc, residual_capacity in path)
@@ -45,10 +61,18 @@ def FordFulkerson_Flow(network, log_core_usage):
             arc.returnArc.flow -= flow
         max_flow += flow
 
+        iterations += 1 # Für Extrembeispiel mit 1000 Iterationen
+        if iterations % 1000 == 0:
+            print(f"Iteration {iterations}")
+            # print(max_flow)
+
         log_core_usage()
         path = flussErhoehen_path(source.id, sink.id)
 
-    return max_flow
+    s_cut = find_st_cut(network, source.id)
+    t_cut = set(network.nodes.keys()) - s_cut
+
+    return max_flow, iterations, s_cut, t_cut
 
 
 
@@ -81,6 +105,7 @@ def FordFulkerson_Debug(network, log_core_usage):
         return None
 
     max_flow = 0
+    iterations = 0
     path = flussErhoehen_path(source.id, sink.id)
     while path is not None:
         flow = min(residual_capacity for arc, residual_capacity in path)
@@ -99,8 +124,10 @@ def FordFulkerson_Debug(network, log_core_usage):
         path = flussErhoehen_path(source.id, sink.id)
 
     print(f"Endgültiger maximaler Fluss: {max_flow}")
-    return max_flow
+    s_cut = find_st_cut(network, source.id)
+    t_cut = set(network.nodes.keys()) - s_cut
 
+    return max_flow, iterations, s_cut, t_cut
 
 
 
@@ -139,8 +166,9 @@ def FordFulkerson_Graph(network, output_dir, log_core_usage):
         os.makedirs(output_dir, exist_ok=True)
         with open(os.path.join(output_dir, f"network_{iteration}.json"), "w") as outfile:
             json.dump(state, outfile)
-    iteration = 0
+    iteration = 0 # Für die Graphenvisualisierung
 
+    iterations = 0 # Iterationen zählen
 
     max_flow = 0
     path = flussErhoehen_path(source.id, sink.id)
@@ -160,4 +188,7 @@ def FordFulkerson_Graph(network, output_dir, log_core_usage):
         log_core_usage()
 
         path = flussErhoehen_path(source.id, sink.id)
-    return max_flow
+    s_cut = find_st_cut(network, source.id)
+    t_cut = set(network.nodes.keys()) - s_cut
+
+    return max_flow, iterations, s_cut, t_cut
