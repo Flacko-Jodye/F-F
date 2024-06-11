@@ -94,15 +94,16 @@ def FordFulkerson_Debug(network, log_core_usage):
                 continue
             visited.add(current_node)
 
-            # Für 3. Instanz des Extrembeispiels --> Unterschiede zwischen
-            # neighbors = [(arc, arc.capacity - arc.flow) for arc in network.network[current_node] if (arc.capacity - arc.flow) > 0 and arc.end not in visited]
-            neighbors = [(arc, arc.capacity - arc.flow) for arc in network.network[current_node] if arc.end not in visited]
-            # Shufflen um Reihenfolge zu verändern
-            random.shuffle(neighbors)
+            # # Für 3. Instanz des Extrembeispiels --> Unterschiede zwischen
+            # # neighbors = [(arc, arc.capacity - arc.flow) for arc in network.network[current_node] if (arc.capacity - arc.flow) > 0 and arc.end not in visited]
+            # neighbors = [(arc, arc.capacity - arc.flow) for arc in network.network[current_node] if arc.end not in visited]
+            # # Shufflen um Reihenfolge zu verändern
+            # random.shuffle(neighbors)
 
-            print(f"Iteration {iteration}: Exploring neighbors of {current_node}") # Debugging
-            # for arc in network.network[current_node]:
-            for arc, residual_capacity in neighbors:
+            # print(f"Iteration {iteration}: Exploring neighbors of {current_node}") # Debugging
+            # # for arc in network.network[current_node]:
+            # for arc, residual_capacity in neighbors:
+            for arc in network.network[current_node]:
                 print(f"  Considering arc {arc.start} -> {arc.end} with residual capacity {residual_capacity}") # Debugging
                 residual_capacity = arc.capacity - arc.flow
                 if residual_capacity > 0 and arc.end not in visited:
@@ -160,7 +161,7 @@ def FordFulkerson_Graph(network, output_dir, log_core_usage):
         visited = set()
         stack = [(source, [])]
 
-# Stack als Ergänzung --> ChatGPT Ergänzung
+
         while stack:
             current_node, path = stack.pop()
             if current_node in visited:
@@ -196,18 +197,22 @@ def FordFulkerson_Graph(network, output_dir, log_core_usage):
         for arc, _ in path:
             arc.flow += flow # Fluss des Pfads erhöhen
             arc.returnArc.flow -= flow  # Rückwärtskante aktualisieren
-        # Gesamtflow berechnen und ausgeben
         max_flow += flow
 
         # Iteration des Graphens abspeichern
-        save_network_iteration(network, iteration, path, output_dir)
-        iteration += 1
+        save_network_iteration(network, iterations, path, output_dir)
+        iterations += 1
+
         
         # Kernauslastung tracken
         log_core_usage()
 
+        path_str = " -> ".join([f"{arc.start}->{arc.end} (Restkapazität: {residual_capacity})" for arc, residual_capacity in path])
+        print(f"Iteration {iterations}: Augmenting path: {path_str}, Flow added: {flow}, Max flow so far: {max_flow}")
+        
+
         path = flussErhoehen_path(source.id, sink.id)
     s_cut = find_st_cut(network, source.id)
     t_cut = set(network.nodes.keys()) - s_cut
-
+    print(f"Final Max flow: {max_flow}")
     return max_flow, iterations, s_cut, t_cut

@@ -7,7 +7,7 @@ import copy
 
 
 # open JSON file
-with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Data\transformed_start_end.json','r') as f:
+with open(r'C:\Users\fabia\OneDrive\Dokumente\Master_FU\Semester 2\Netzwerke\F&F\F-F\Data\transformed_netgen_8_13a.json','r') as f:
     data = json.load(f)
 
 print(data.keys())
@@ -32,7 +32,7 @@ print(f"Flow values:{flow_values}")
 flow_values_str_keys = {str(key): value for key, value in flow_values.items()}
 
 # Save flow_values to a JSON file
-with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Data\mf_gurobi_netgen_8_08a.json.json', 'w') as f:
+with open(r'C:\Users\fabia\OneDrive\Dokumente\Master_FU\Semester 2\Netzwerke\F&F\F-F\Data\chvatal_small_final_network_graph.json', 'w') as f:
     json.dump(flow_values_str_keys, f)
 
 ##################################################################################################

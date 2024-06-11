@@ -184,3 +184,263 @@ Solved in 7 iterations and 0.01 seconds (0.00 work units)
 Optimal objective  2.200000000e+01
 
 User-callback calls 38, time in user-callback 0.01 sec
+
+Gurobi 11.0.1 (win64) logging started Tue Jun 11 02:47:31 2024
+
+Set parameter LogFile to value "mf_gurobi.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+
+Gurobi 11.0.1 (win64) logging started Tue Jun 11 02:47:47 2024
+
+Set parameter LogFile to value "mf_gurobi.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+
+Gurobi 11.0.1 (win64) logging started Tue Jun 11 02:50:39 2024
+
+Set parameter LogFile to value "mf_gurobi.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+
+Gurobi 11.0.1 (win64) logging started Tue Jun 11 02:52:40 2024
+
+Set parameter LogFile to value "mf_gurobi.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+
+Gurobi 11.0.1 (win64) logging started Tue Jun 11 02:57:37 2024
+
+Set parameter LogFile to value "mf_gurobi.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+
+Gurobi 11.0.1 (win64) logging started Tue Jun 11 02:58:23 2024
+
+Set parameter LogFile to value "mf_gurobi.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: AMD Ryzen 7 5800H with Radeon Graphics, instruction set [SSE2|AVX|AVX2]
+Thread count: 8 physical cores, 16 logical processors, using up to 16 threads
+
+Optimize a model with 8 rows, 34 columns and 62 nonzeros
+Model fingerprint: 0x665ecb9e
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 2e+01]
+  RHS range        [0e+00, 0e+00]
+Presolve removed 2 rows and 18 columns
+Presolve time: 0.01s
+Presolved: 6 rows, 16 columns, 27 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.2000000e+01   1.249500e+01   0.000000e+00      0s
+       7    2.2000000e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 7 iterations and 0.03 seconds (0.00 work units)
+Optimal objective  2.200000000e+01
+
+User-callback calls 50, time in user-callback 0.00 sec
+
+Gurobi 11.0.1 (win64) logging started Tue Jun 11 03:01:11 2024
+
+Set parameter LogFile to value "mf_gurobi.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: AMD Ryzen 7 5800H with Radeon Graphics, instruction set [SSE2|AVX|AVX2]
+Thread count: 8 physical cores, 16 logical processors, using up to 16 threads
+
+
+User-callback calls 6, time in user-callback 0.00 sec
+
+Gurobi 11.0.1 (win64) logging started Tue Jun 11 03:01:17 2024
+
+Set parameter LogFile to value "mf_gurobi.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: AMD Ryzen 7 5800H with Radeon Graphics, instruction set [SSE2|AVX|AVX2]
+Thread count: 8 physical cores, 16 logical processors, using up to 16 threads
+
+
+User-callback calls 6, time in user-callback 0.00 sec
+
+Gurobi 11.0.1 (win64) logging started Tue Jun 11 03:02:33 2024
+
+Set parameter LogFile to value "mf_gurobi.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: AMD Ryzen 7 5800H with Radeon Graphics, instruction set [SSE2|AVX|AVX2]
+Thread count: 8 physical cores, 16 logical processors, using up to 16 threads
+
+
+User-callback calls 6, time in user-callback 0.00 sec
+
+Gurobi 11.0.1 (win64) logging started Tue Jun 11 03:17:45 2024
+
+Set parameter LogFile to value "mf_gurobi.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: AMD Ryzen 7 5800H with Radeon Graphics, instruction set [SSE2|AVX|AVX2]
+Thread count: 8 physical cores, 16 logical processors, using up to 16 threads
+
+Optimize a model with 6 rows, 7 columns and 11 nonzeros
+Model fingerprint: 0x26ad6139
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+03]
+  RHS range        [0e+00, 0e+00]
+Presolve removed 6 rows and 7 columns
+Presolve time: 0.01s
+Presolve: All rows and columns removed
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0000000e+03   0.000000e+00   0.000000e+00      0s
+
+Solved in 0 iterations and 0.02 seconds (0.00 work units)
+Optimal objective  1.000000000e+03
+
+User-callback calls 33, time in user-callback 0.00 sec
+
+Gurobi 11.0.1 (win64) logging started Tue Jun 11 03:20:11 2024
+
+Set parameter LogFile to value "mf_gurobi.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: AMD Ryzen 7 5800H with Radeon Graphics, instruction set [SSE2|AVX|AVX2]
+Thread count: 8 physical cores, 16 logical processors, using up to 16 threads
+
+Optimize a model with 6 rows, 7 columns and 11 nonzeros
+Model fingerprint: 0x26ad6139
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+03]
+  RHS range        [0e+00, 0e+00]
+Presolve removed 6 rows and 7 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0000000e+03   0.000000e+00   0.000000e+00      0s
+
+Solved in 0 iterations and 0.01 seconds (0.00 work units)
+Optimal objective  1.000000000e+03
+
+User-callback calls 33, time in user-callback 0.00 sec
+
+Gurobi 11.0.1 (win64) logging started Tue Jun 11 03:20:15 2024
+
+Set parameter LogFile to value "mf_gurobi.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: AMD Ryzen 7 5800H with Radeon Graphics, instruction set [SSE2|AVX|AVX2]
+Thread count: 8 physical cores, 16 logical processors, using up to 16 threads
+
+Optimize a model with 6 rows, 7 columns and 11 nonzeros
+Model fingerprint: 0x26ad6139
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+03]
+  RHS range        [0e+00, 0e+00]
+Presolve removed 6 rows and 7 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0000000e+03   0.000000e+00   0.000000e+00      0s
+
+Solved in 0 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.000000000e+03
+
+User-callback calls 33, time in user-callback 0.00 sec
+
+Gurobi 11.0.1 (win64) logging started Tue Jun 11 03:20:44 2024
+
+Set parameter LogFile to value "mf_gurobi.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: AMD Ryzen 7 5800H with Radeon Graphics, instruction set [SSE2|AVX|AVX2]
+Thread count: 8 physical cores, 16 logical processors, using up to 16 threads
+
+Optimize a model with 6 rows, 7 columns and 11 nonzeros
+Model fingerprint: 0x26ad6139
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+03]
+  RHS range        [0e+00, 0e+00]
+Presolve removed 6 rows and 7 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0000000e+03   0.000000e+00   0.000000e+00      0s
+
+Solved in 0 iterations and 0.01 seconds (0.00 work units)
+Optimal objective  1.000000000e+03
+
+User-callback calls 33, time in user-callback 0.00 sec
+
+Gurobi 11.0.1 (win64) logging started Tue Jun 11 03:21:03 2024
+
+Set parameter LogFile to value "mf_gurobi.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+Gurobi Optimizer version 11.0.1 build v11.0.1rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: AMD Ryzen 7 5800H with Radeon Graphics, instruction set [SSE2|AVX|AVX2]
+Thread count: 8 physical cores, 16 logical processors, using up to 16 threads
+
+Optimize a model with 6 rows, 7 columns and 11 nonzeros
+Model fingerprint: 0x26ad6139
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+03]
+  RHS range        [0e+00, 0e+00]
+Presolve removed 6 rows and 7 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0000000e+03   0.000000e+00   0.000000e+00      0s
+
+Solved in 0 iterations and 0.00 seconds (0.00 work units)
+Optimal objective  1.000000000e+03
+
+User-callback calls 33, time in user-callback 0.00 sec
+
+Gurobi 11.0.1 (win64) logging started Tue Jun 11 03:22:20 2024
+
+Set parameter LogFile to value "mf_gurobi.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
