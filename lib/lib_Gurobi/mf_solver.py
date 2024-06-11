@@ -62,9 +62,15 @@ def solve_mf (nodes, arcs, source, sink):
             # Write each iteration's information to a file
             with open("mf_iterations_gurobi.log", "a") as f:
                 f.write(f"Iteration: {iter_count}, Objective Value: {obj_val}\n")
+<<<<<<< HEAD
     ############################################################################################
     
     if model.status == GRB.OPTIMAL: 
+=======
+
+    model.optimize(my_callback)
+    if model.status == GRB.OPTIMAL: #GRB.OPTIMAL =" the optimization was successful"
+>>>>>>> 537d675cc5b3f2791e6a6115b427616fb8574a85
         max_flow = model.objVal
         flow_values = {"arcs": [{"start": arc[0], "end": arc[1], "flow": flow[arc].X, "capacity": flow[arc].ub} for arc in flow]}
                         #  flow[arc].X = flow value of each arc
