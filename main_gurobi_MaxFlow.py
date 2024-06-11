@@ -16,7 +16,7 @@ with open(f'Data/{input_filename_transformed_data}','r') as f:
 
 print(data.keys())
 
-# extract nodes and arcs
+
 nodes_dic = data['nodes']
 arcs = data['arcs']
 
@@ -74,7 +74,7 @@ core_usage_data = {
     "physical_cores": physical_cores,
     "logical_cores": logical_cores
 }
-##### save flow values to a JSON file    
+    
 flow_values_str_keys = {str(key): value for key, value in flow_values.items()}
 
 # Save flow_values to a JSON file

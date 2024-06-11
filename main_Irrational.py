@@ -79,7 +79,7 @@ print(f"Laufzeit: {running_time} Sekunden")
 
 
 # Graph abspeichern
-# Kommentare löschen um neuen Graphen zu speichern
+
 final_network = {
     "nodes": {node_id: {"source": node.source, "target": node.target} for node_id, node in network.nodes.items()},
     "arcs": [{"start": arc.start, "end": arc.end, "capacity": arc.capacity, "flow": arc.flow} for arc in network.getArcs()]
