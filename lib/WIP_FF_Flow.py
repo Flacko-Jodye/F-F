@@ -1,12 +1,11 @@
 # Gibt den Max-Flow wieder ohne dass Zwischnschritte geprintet werden oder JSONs zur Visualisierung erstellt werden.
-# Ziel
 
 import json
 from lib.network import Network
 from lib.Arc import Arc
 from lib.Nodes import Node
-# from WIP_FF import FordFulkerson_Flow
-from lib.WIP_BFS import FordFulkerson_Flow
+from WIP_FF import FordFulkerson_Flow
+# from lib.WIP_BFS import FordFulkerson_Flow
 import os
 import time
 import psutil
@@ -70,10 +69,8 @@ memory_info_end = process.memory_info()
 running_time = end_time - start_time
 cpu_auslastung = (cpu_end - cpu_start) / psutil.cpu_count()
 memory_usage = process.memory_info().rss
-# memory_usage = memory_info_start.rss - memory_info_end.rss
 
-
-process = process.memory_info().rss # "????"
+process = process.memory_info().rss
 
 # Iteration abspeichern für Visualisierung
 

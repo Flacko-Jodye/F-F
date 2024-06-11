@@ -1,3 +1,4 @@
+# Einzelne Schritte in Folge vom Graph Modus visualisieren
 import json
 import networkx as nx
 import matplotlib.pyplot as plt
