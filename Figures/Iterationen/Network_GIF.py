@@ -11,7 +11,7 @@ def crete_gif(image_folder, gif_path, duration):
         file_path = os.path.join(image_folder, filename)
         image = imageio.imread(file_path)
         images.append(image)
-    imageio.mimsave(gif_path, images, duration= duration_per_frame)
+    imageio.mimsave(gif_path, images, duration= duration_per_frame, loop = 0)
 
 if __name__ == "__main__":
     image_folder = "C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Figures/Iterationen"

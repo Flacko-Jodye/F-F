@@ -5,7 +5,8 @@ import json
 from network import Network
 from Arc import Arc
 from Nodes import Node
-from WIP_FF import FordFulkerson_Flow
+# from WIP_FF import FordFulkerson_Flow
+from WIP_BFS import FordFulkerson_Flow
 import os
 import time
 import psutil
@@ -34,20 +35,6 @@ for node_id in data["nodes"]:
     target = (node_id == "sink")
     node = Node(id = node_id, source = source, target = target)
     network.nodes[node_id] = node
-
-
-"Alte Version"
-# # Knoten hinzufügen
-# for node_data in data["nodes"]:
-#     node = Node(node_data, node_data)
-#     network.addNode(node)
-
-# # Pfade dem Netzwerk hinzufügen
-# for node_id in data["node"]:
-#     source = (node_id == "source")
-#     target = (node_id == "sink")
-#     node = Node(id= node_id, source=source, target=target)
-#     network.nodes[node_id] = node   
 
 for arc_data in data["arcs"]:
     network.addArc(arc_data["start"], arc_data["end"], arc_data["capacity"])

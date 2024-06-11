@@ -2,7 +2,9 @@ import json
 from network import Network
 from Arc import Arc
 from Nodes import Node
-from WIP_FF import FordFulkerson_Graph
+# Wählen ob normaler FF-Algorithmus mit DFS oder mit BFS (Edmonds-Karp)
+# from WIP_FF import FordFulkerson_Graph
+from WIP_BFS import FordFulkerson_Graph
 import os
 import time
 import psutil
