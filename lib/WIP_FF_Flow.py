@@ -72,7 +72,7 @@ memory_usage = process.memory_info().rss
 # memory_usage = memory_info_start.rss - memory_info_end.rss
 
 
-process = process.memory_info().rss # "????"
+process = process.memory_info().rss
 
 # Iteration abspeichern für Visualisierung
 
