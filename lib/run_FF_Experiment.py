@@ -1,3 +1,5 @@
+# Histogramm erstellen
+# Zu grpßen Teilen von Copilot generieren lassen. Individuelle Anpassungen wurden vorgenommen
 import json
 import random
 import matplotlib.pyplot as plt

@@ -1,16 +1,21 @@
+# Große Teile des Codes für die Metriken (z.B. CPU-Auslastung) wurden von Copilot übernommen.
 import json
 from lib.network import Network
 from lib.Arc import Arc
 from lib.Nodes import Node
 # Wählen ob normaler FF-Algorithmus mit DFS oder mit BFS (Edmonds-Karp)
-# from WIP_FF import FordFulkerson_Graph
-from WIP_BFS import FordFulkerson_Graph
+from WIP_FF import FordFulkerson_Graph
+# from WIP_BFS import FordFulkerson_Graph
+
 import os
 import time
 import psutil
 
+
+input_path = os.path.join(os.path.dirname(__file__), '..', 'Data', 'transformed_start_end.json')
+
 # Load the JSON data
-input_path = 'C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_start_end.json'
+# input_path = 'C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_start_end.json'
 # input_path = 'C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_netgen_8_08a.json.json'
 # input_path = "C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/NEU_WORSTCASE_Instanz_Anderer_Weg.json"
 

@@ -1,16 +1,6 @@
-#To access a file from lib within lib:
-#from lib.arc import Arc
-
-# class Network:
-#     def __init__(self, network_input):
-#         print('TBD')
-
-# Ergänzungen?
-# - Verhinderung von möglichen overflows
-# - visited token (1 oder true) oder in Nodes
-
-from lib.Arc import Arc
-
+# Generelle Struktur nah an: https://brilliant.org/wiki/ford-fulkerson-algorithm/#residual-graphs sowie https://github.com/williamfiset/Algorithms/blob/master/src/main/java/com/williamfiset/algorithms/graphtheory/networkflow/FordFulkersonDFSAdjacencyMatrix.java
+# Ergänzungen zum Schluss von ChatGPT (s. letzte Zeilen)
+from Arc import Arc
 
 class Network:
     def __init__(self):
@@ -35,21 +25,9 @@ class Network:
                 return node
         print("Sink not found")
         return None
-    
-    # def getNode(self, id):
-    #     for node in self.arcs:
-    #         if node.source == id:
-    #             return node
 
     def getNode(self, id):
         return self.nodes.get(id)
-    
-            
-    # def getNodesInNetwork(self, id):
-    #     for node in self.nodes:
-    #         if node.id == id:
-    #             return node
-    #     return False
     
     def getNodesInNetwork(self, id):
         return id in self.nodes
