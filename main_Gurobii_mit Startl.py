@@ -12,7 +12,7 @@ import copy
 import os
 
 # open JSON file
-with open('Data/netgen_8_13a.json','r') as f:
+with open('Data/netgen_8_08a.json','r') as f:
     data = json.load(f)
 
 print(data.keys())

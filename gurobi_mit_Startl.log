@@ -38,3 +38,33 @@ Solved in 4790 iterations and 0.64 seconds (0.11 work units)
 Optimal objective  1.184953451e+09
 
 User-callback calls 79, time in user-callback 0.00 sec
+
+Gurobi 11.0.2 (win64) logging started Tue Jun 11 21:43:05 2024
+
+Set parameter LogFile to value "gurobi_mit_Startl.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+Gurobi Optimizer version 11.0.2 build v11.0.2rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 256 rows, 2048 columns and 4096 nonzeros
+Model fingerprint: 0x12bdc08b
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [5e+00, 1e+04]
+  Bounds range     [1e+00, 2e+03]
+  RHS range        [9e+01, 3e+03]
+Presolve time: 0.00s
+Presolved: 256 rows, 2048 columns, 4096 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.9196940e+07   3.574500e+04   0.000000e+00      0s
+     217    1.4227454e+08   0.000000e+00   0.000000e+00      0s
+
+Solved in 217 iterations and 0.12 seconds (0.00 work units)
+Optimal objective  1.422745360e+08
+
+User-callback calls 246, time in user-callback 0.12 sec
