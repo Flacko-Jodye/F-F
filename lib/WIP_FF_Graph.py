@@ -1,7 +1,7 @@
 import json
-from network import Network
-from Arc import Arc
-from Nodes import Node
+from lib.network import Network
+from lib.Arc import Arc
+from lib.Nodes import Node
 # Wählen ob normaler FF-Algorithmus mit DFS oder mit BFS (Edmonds-Karp)
 # from WIP_FF import FordFulkerson_Graph
 from WIP_BFS import FordFulkerson_Graph

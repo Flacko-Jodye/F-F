@@ -7,7 +7,7 @@ def solve_mcf (nodes, arcs):
     model = gp.Model("min-cost-problem")
 
     # Set Gurobi log file
-    model.Params.LogFile = 'gurobi ohne.log'
+    model.Params.LogFile = 'gurobi_ohne_Startl.log'
     
     # Enable verbose output
     model.Params.OutputFlag = 1

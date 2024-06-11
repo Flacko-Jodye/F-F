@@ -12,7 +12,7 @@ import copy
 import os
 
 # open JSON file
-with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Data\netgen_8_08a.json','r') as f:
+with open('Data/netgen_8_13a.json','r') as f:
     data = json.load(f)
 
 print(data.keys())
@@ -24,7 +24,7 @@ arcs = data['arcs']
 
 
 # Load the start solution
-with open(r"D:\Fub SS 2024\Metaheurisitk\F-F\Data\netgen_8_08a_small_final_network_graph.json", 'r') as f:
+with open("Data/netgen_8_08a_small_final_network_graph.json", 'r') as f:
     data = json.load(f)
 
 start_solution = { (arc['start'], arc['end']): arc['flow'] for arc in data['arcs'] }
@@ -88,11 +88,13 @@ core_usage_data = {
 flow_values_str_keys = {str(key): value for key, value in flow_values.items()}
 
 # Save flow_values to a JSON file
-with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Gurobi_Min_Cost\Output\Output_mit_Startl\mc_ff_chvatal_neu.json', 'w') as f:
+output_flow_path="Output/Min-Cost-Flow/Mit_Startlösung_08_08a.json"
+with open(output_flow_path, 'w') as f:
     json.dump(flow_values_str_keys, f)
+print(f"Flow values abgespeichert unter {output_flow_path}")
 
 # Kernauslastung abspeichern
-core_usage_path = r"D:\Fub SS 2024\Metaheurisitk\F-F\Output\Kernelauslastung_MinCost_Gurobi.json"
+core_usage_path = "Output/Min-Cost-Flow/Kernelauslastung_Mit_Startlösung_8_08a.json"
 with open(core_usage_path, "w") as outfile:
     json.dump(core_usage_data, outfile)
 print(f"Kernauslastung abgespeichert unter {core_usage_path}")

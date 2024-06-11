@@ -2,11 +2,11 @@
 # Ziel
 
 import json
-from network import Network
-from Arc import Arc
-from Nodes import Node
+from lib.network import Network
+from lib.Arc import Arc
+from lib.Nodes import Node
 # from WIP_FF import FordFulkerson_Flow
-from WIP_BFS import FordFulkerson_Flow
+from lib.WIP_BFS import FordFulkerson_Flow
 import os
 import time
 import psutil
