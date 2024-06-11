@@ -94,6 +94,8 @@ def FordFulkerson_Debug(network, log_core_usage):
                 continue
             visited.add(current_node)
 
+
+            "Um Randomisierung für die 3. Instanz zu testen, Kommentare entfernen und Zeile 107 auskommentieren"
             # # Für 3. Instanz des Extrembeispiels --> Unterschiede zwischen
             # # neighbors = [(arc, arc.capacity - arc.flow) for arc in network.network[current_node] if (arc.capacity - arc.flow) > 0 and arc.end not in visited]
             # neighbors = [(arc, arc.capacity - arc.flow) for arc in network.network[current_node] if arc.end not in visited]
@@ -179,13 +181,12 @@ def FordFulkerson_Graph(network, output_dir, log_core_usage):
     def save_network_iteration(network, iteration, augmenting_path, output_dir):
         state = {
             "nodes": {node_id: {"source": node.source, "target": node.target} for node_id, node in network.nodes.items()},
-            "arcs": [{"start": arc.start, "end": arc.end, "capacity": arc.capacity, "flow": arc.flow} for arc in network.getArcs() if arc.flow > 0],  # Store only positive flow arcs
+            "arcs": [{"start": arc.start, "end": arc.end, "capacity": arc.capacity, "flow": arc.flow} for arc in network.getArcs() if arc.flow > 0],  # Nur positive Werte speichern
             "augmenting_path": [(arc.start, arc.end) for arc, _ in augmenting_path]
         }
         os.makedirs(output_dir, exist_ok=True)
         with open(os.path.join(output_dir, f"network_{iteration}.json"), "w") as outfile:
             json.dump(state, outfile)
-    # iteration = 0 # Für die Graphenvisualisierung
 
     iterations = 0 # Iterationen zählen
 
