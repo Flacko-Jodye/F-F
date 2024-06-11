@@ -6,11 +6,10 @@ def plot_core_usage(input_path, output_path, max_points=500):
     with open(input_path, "r") as infile:
         core_usages = json.load(infile)
     
-    # Extract core information
     physical_cores = core_usages.get('physical_cores', 'Unknown')
     logical_cores = core_usages.get('logical_cores', 'Unknown')
     
-    # Normalize the timestamps to start from zero
+    # Mormalisierung
     timestamps = core_usages['timestamps']
     core_usage_data = core_usages['core_usages']
     start_time = timestamps[0]
@@ -23,10 +22,8 @@ def plot_core_usage(input_path, output_path, max_points=500):
         for i, core in enumerate(usage):
             core_usage_over_time[i].append(core)
     
-    # Increase figure width
     plt.figure(figsize=(30, 8))
 
-    # Limit the number of points to plot
     step = max(1, len(normalized_timestamps) // max_points)
     limited_timestamps = normalized_timestamps[::step]
     for core, usage in core_usage_over_time.items():
@@ -36,12 +33,11 @@ def plot_core_usage(input_path, output_path, max_points=500):
     plt.ylabel('CPU Auslastung (%)')
     plt.title('CPU Auslastung über die Zeit')
     plt.legend(loc='upper left', bbox_to_anchor=(1, 1), ncol=1)
-    # Add text about core information at the bottom of the plot
+    
     plt.figtext(0.99, 0.01, f"Physical Cores: {physical_cores}, Logical Cores: {logical_cores}", horizontalalignment='right')
     
-    # Set x-axis ticks to show only full values
     max_time = int(limited_timestamps[-1])
-    plt.xticks(range(0, max_time + 1, max(1, max_time // 10)))  # Adjust tick interval based on total time
+    plt.xticks(range(0, max_time + 1, max(1, max_time // 10))) 
 
     plt.tight_layout()
     plt.savefig(output_path)

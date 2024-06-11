@@ -38,5 +38,7 @@ Wir haben uns dazu entschieden 3 verschieden Modi zu erstellen für den F&F-Algo
     2) **Debug:** Printet die Zwischenschritte des Algorithmus, um Nachvollziehbarkeit für den Algorithmus zu gewähren.
     3) **Graph:** Speicher die Zwischenschritte in einer JSON ab, sodass Visualisierungen der Zwischenschritte erstellt werden können. Darüber hinaus wird außerdem der finale Graph abgespeichert, welcher dann auch visualisiert werden kann.
 
+Um den Extremfall mit dem randomisierten Stack auszuführen (vgl. dazu Output_Übersicht), muss in lib/WIP_FF.py dem Kommentar bei der FordFulkerson_Debug angepasst werden; siehe dazu den passenden Code in der Datei.
+
 ## Output:
 Wir haben ein Jupyter-Notebook erstellt, welches die zentralen Ergebnisse zusammenfasst --> "Output_Overview.ipynb"

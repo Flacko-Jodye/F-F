@@ -32,22 +32,6 @@ for node_id in data["nodes"]:
     print(f"Initialized node {node.id}: source={node.source}, target={node.target}")
     network.nodes[node_id] = node
 
-
-"Alte Version"
-# # Knoten hinzufügen
-# for node_data in data["nodes"]:
-#     node = Node(node_data, node_data)
-#     network.addNode(node)
-
-# # Pfade dem Netzwerk hinzufügen
-# for node_id in data["node"]:
-#     source = (node_id == "source")
-#     target = (node_id == "sink")
-#     node = Node(id= node_id, source=source, target=target)
-#     network.nodes[node_id] = node   
-
-
-
 for arc_data in data["arcs"]:
     capacity = arc_data["capacity"]
     if isinstance(capacity, str): # weil in Datensaetzen pi und e vorkommen könnten
