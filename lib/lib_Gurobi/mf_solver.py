@@ -1,6 +1,6 @@
 import gurobipy as gp
 from gurobipy import GRB
-import time
+
 
 
 
@@ -22,8 +22,7 @@ def solve_mf (nodes, arcs, source, sink):
         flow[arc['start'], arc['end']] = model.addVar(
             lb=0, ub=arc['capacity'], name=f"flow_{arc['start']}_{arc['end']}")
         
-        # addVar: add a new variable to the model(1b: lower bound, ub: upper bound, obj: objective coefficient, vtype: variable type, name: variable name)
-
+        
     #constraints        
     for node in nodes:
         if node == source:
@@ -31,14 +30,14 @@ def solve_mf (nodes, arcs, source, sink):
             model.addConstr(
                 gp.quicksum(flow[arc['start'], arc['end']] for arc in arcs if arc['end'] == node) == 0,
                 name=f"flow_balance_{node}_in")
-                #for source: each flow out <= sum of capacity
+                #for source: 
                             #sum of flow in = 0
         elif node == sink:
 
             model.addConstr(
                 gp.quicksum(flow[arc['start'], arc['end']] for arc in arcs if arc['start'] == node) == 0,
                 name=f"flow_balance_{node}_out")
-            #for sink: each flow in <= sum of capacity
+                #for sink: 
                             #flow out = flow from source to other nodes
         else:
             model.addConstr(
@@ -46,12 +45,15 @@ def solve_mf (nodes, arcs, source, sink):
                 gp.quicksum(flow[arc['start'], arc['end']] for arc in arcs if arc['start'] == node),
                 name=f"flow_balance_{node}")
     
+    
+    
     # Set objective
     model.setObjective(
         gp.quicksum(flow[arc['start'], arc['end']] for arc in arcs if arc['end'] == sink),
         GRB.MAXIMIZE)
     
-    start_time = time.time()  # gain the start time 
+    
+    
     ############################### Iteration speichern########################################
     def my_callback(model, where):
         if where == GRB.Callback.SIMPLEX:
@@ -61,7 +63,7 @@ def solve_mf (nodes, arcs, source, sink):
             # Write each iteration's information to a file
             with open("mf_iterations_gurobi.log", "a") as f:
                 f.write(f"Iteration: {iter_count}, Objective Value: {obj_val}\n")
-
+    ###############################################################################################
     model.optimize(my_callback)
     if model.status == GRB.OPTIMAL: #GRB.OPTIMAL =" the optimization was successful"
         max_flow = model.objVal

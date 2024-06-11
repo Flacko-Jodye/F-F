@@ -1,0 +1,14 @@
+{
+    "nodes": ["source", "u1", "u2", "u3", "sink"],
+    "arcs": [
+      {"start": "source", "end": "u1", "capacity": 1},
+      {"start": "u1", "end": "u2", "capacity": "pi"},
+      {"start": "u2", "end": "sink", "capacity": 1},
+      {"start": "source", "end": "u3", "capacity": 10},
+      {"start": "u3", "end": "u1", "capacity": 10},
+      {"start": "u3", "end": "u2", "capacity": 10},
+      {"start": "u3", "end": "sink", "capacity": 10},
+      {"start": "source", "end": "sink", "capacity": 10},
+      {"start": "u1", "end": "sink", "capacity": 10}
+    ]
+  }

@@ -7,10 +7,10 @@ import ast
 
 def solve_mcf (nodes, arcs, start_solution):
 
-    # Create the Gurobi model
+    
     model = gp.Model("min-cost-problem")
 
-    # Set Gurobi log file
+    
     model.Params.LogFile = 'gurobi mit.log'
     
     # Enable verbose output
@@ -19,14 +19,14 @@ def solve_mcf (nodes, arcs, start_solution):
     model.Params.FeasibilityTol = 1e-9
     model.Params.OptimalityTol = 1e-9
 
-    # create variable for flow : 0<flow< capacity(lb: lower bound, ub: upper bound, name: from i to j)
+    # 
     flow = {}
     for arc in arcs:
         flow[arc['from'], arc['to']] = model.addVar(
             lb=0, ub=arc['upper_bound'], name=f"flow_{arc['from']}_{arc['to']}")
         if (arc['from'], arc['to']) in start_solution:
             flow[arc['from'], arc['to']].start = start_solution[(arc['from'], arc['to'])]
-    # 0<=flow<=upper_bound
+            # 0<=flow<=upper_bound
 
 
     for node in nodes:
@@ -36,16 +36,15 @@ def solve_mcf (nodes, arcs, start_solution):
     #flow_in - flow_out = demand
 
 
-    # Set the objective function
+    # The objective function
     model.setObjective(
         gp.quicksum(flow[arc['from'], arc['to']] * arc['cost'] for arc in arcs ),
         GRB.MINIMIZE)
-    #minimize sum (flow*cost)
 
-    '''start_time = time.time()  # gain the start time'''
+
 
 ############################### Iteration speichern########################################
-    '''def my_callback(model, where):
+    def my_callback(model, where):
         if where == GRB.Callback.SIMPLEX:
             iter_count = model.cbGet(GRB.Callback.SPX_ITRCNT)
             obj_val = model.cbGet(GRB.Callback.SPX_OBJVAL)
@@ -53,21 +52,15 @@ def solve_mcf (nodes, arcs, start_solution):
             # Write each iteration's information to a file
             with open("iterations.log", "a") as f:
                 f.write(f"Iteration: {iter_count}, Objective Value: {obj_val}\n")
-    '''
+  
 
         #########################################################
 
     # Solve the model
-    model.optimize()#my_callback
+    model.optimize(my_callback)
 
-    '''end_time = time.time()  # gain the end time
-
-    elapsed_time = end_time - start_time  # calculate the elapsed time
-
-    print(f"Gurobi optimization elapsed time: {elapsed_time:.6f} seconds") # print the elapsed time
-    '''
-
-    if model.status == GRB.OPTIMAL: #GRB.OPTIMAL =" the optimization was successful"
+    #check if the model is optimal
+    if model.status == GRB.OPTIMAL: 
         min_cost = model.objVal
         flow_values = {"arcs": [{"start": arc[0], "end": arc[1], "flow": flow[arc].X, "capacity": flow[arc].ub} for arc in flow]}
                         #  flow[arc].X = flow value of each arc
