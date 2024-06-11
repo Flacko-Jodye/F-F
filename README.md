@@ -1,5 +1,5 @@
 # F-F
-
+## Quellen
 Dieses Projekt orientiert sich zu großen Teilen an den folgenden Quellen:
 
 Ford-Fulkerson Algorithm (https://brilliant.org/wiki/ford-fulkerson-algorithm/#residual-graphs) von Alex Chumbley, Karleigh Moore, Tim Hor, Jimin Khim und Eli Ross
@@ -29,3 +29,10 @@ Maxflow-Algorithms (https://github.com/anxiaonong/Maxflow-Algorithms/tree/master
 
 
 Generell wurde Copilot intensiv genutzt, um Code zu ergänzen bzw. zu generieren. Die Visualisierungen wurden durch verschiedene Prompts in ChatGPT durchgeführt. Codes abseits der Algorithmen, so z.B. für die Visualisierungen, wurden anfangs von Copilot generiert und anschließend individuell angepasst durch entsprechende Recherche in den Documentations der Libraries.
+
+## Struktur:
+Wir haben uns dazu entschieden 3 verschieden Modi zu erstellen für den F&F-Algorithmus. Alle 3 Modi berechnen den Max-Flow, dienen jedoch anderen Zwecken:
+    1) **Flow:** Dient dazu, den Max-Flow in kürzest möglicher Laufzeit zu ermitteln. Es werden keine Zwischenschritte ausgegeben, um die Laufzeit zu minimieren.
+    2) **Debug:** Printet die Zwischenschritte des Algorithmus, um Nachvollziehbarkeit für den Algorithmus zu gewähren.
+    3) **Graph:** Speicher die Zwischenschritte in einer JSON ab, sodass Visualisierungen der Zwischenschritte erstellt werden können. Darüber hinaus wird außerdem der finale Graph abgespeichert, welcher dann auch visualisiert werden kann.
+

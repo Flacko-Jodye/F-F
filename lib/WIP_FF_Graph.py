@@ -1,3 +1,4 @@
+# Große Teile des Codes für die Metriken (z.B. CPU-Auslastung) wurden von Copilot übernommen.
 import json
 from network import Network
 from Arc import Arc
