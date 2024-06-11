@@ -69,8 +69,6 @@ memory_info_end = process.memory_info()
 running_time = end_time - start_time
 cpu_auslastung = (cpu_end - cpu_start) / psutil.cpu_count()
 memory_usage = process.memory_info().rss
-# memory_usage = memory_info_start.rss - memory_info_end.rss
-
 
 process = process.memory_info().rss
 
