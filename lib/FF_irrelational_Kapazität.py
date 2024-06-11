@@ -47,11 +47,13 @@ def FordFulkerson(network, output_dir):
     iteration = 0
     max_flow = 0
     path = fluss_erhoehen_path(source.id, sink.id)
-    
+
+    # Anfangswerte der rekursiven Sequenz
     an = 1
     an_plus_1 = math.pi
 
     while path is not None:
+        # Sicherstellen, dass der Pfadfluss die rekursive Beziehung bildet
         if iteration % 2 == 0:
             flow = an
         else:
@@ -60,15 +62,15 @@ def FordFulkerson(network, output_dir):
         path_str = " -> ".join([f"{arc.start}->{arc.end} (Restkapazität: {residual_capacity})" for arc, residual_capacity in path])
         print(f"Flussvergrößernder Pfad gefunden: {path_str} mit Fluss {flow}")
         for arc, _ in path:
-            arc.flow += flow  # 增加路径上的流量
-            arc.returnArc.flow -= flow  # 更新反向边上的流量
+            arc.flow += flow 
+            arc.returnArc.flow -= flow  
             print(f"Aktualisierter Fluss auf Kante von {arc.start} nach {arc.end}: {arc.flow}")
             print(f"Aktualisierter Fluss auf Rückwärtskante von {arc.end} nach {arc.start}: {arc.returnArc.flow}")
 
         max_flow += flow
         print(f"Aktueller maximaler Fluss: {max_flow}")
 
-        # 更新递归序列
+        # Aktualisieren Sie die rekursive Sequenz
         an, an_plus_1 = an_plus_1, an - an_plus_1
 
         save_network_iteration(network, iteration, path, output_dir)
