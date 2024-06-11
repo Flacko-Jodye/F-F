@@ -9,11 +9,7 @@ from networkx import bipartite_layout
 import copy
 
 
-    # transformed_start_end.json (Chavatal Small)
-    # transformed_netgen_8_08a.json
-    # transformed_netgen_8_13a.json
-
-input_filename_transformed_data= 'transformed_start_end.json'
+input_filename_transformed_data= 'chvatal_small2.json'
 with open(f'Data/{input_filename_transformed_data}','r') as f:
     data = json.load(f)
 

@@ -63,3 +63,10 @@ Solved in 434 iterations and 0.27 seconds (0.01 work units)
 Optimal objective  1.600000000e+04
 
 User-callback calls 465, time in user-callback 0.23 sec
+
+Gurobi 11.0.1 (win64) logging started Tue Jun 11 22:01:09 2024
+
+Set parameter LogFile to value "mf_gurobi.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
