@@ -12,7 +12,7 @@ import copy
 import os
 
 # open JSON file
-with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Data\netgen_8_13a.json','r') as f:
+with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Data\netgen_8_08a.json','r') as f:
     data = json.load(f)
 
 print(data.keys())
@@ -24,7 +24,7 @@ arcs = data['arcs']
 
 
 # Load the start solution
-with open(r"D:\Fub SS 2024\Metaheurisitk\F-F\Output\neu.json", 'r') as f:
+with open(r"D:\Fub SS 2024\Metaheurisitk\F-F\Data\netgen_8_08a_small_final_network_graph.json", 'r') as f:
     data = json.load(f)
 
 start_solution = { (arc['start'], arc['end']): arc['flow'] for arc in data['arcs'] }

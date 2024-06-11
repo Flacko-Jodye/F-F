@@ -1,25 +1,33 @@
-import json
-import os
+import ast
 import time
+
+import psutil
+from lib.lib_Gurobi_MinCost import mcf_solver_mit_Startl
+import json
 import networkx as nx
 import matplotlib.pyplot as plt
-import psutil
-from lib.lib_Gurobi import mf_solver
+
 from networkx import bipartite_layout
 import copy
-
+import os
 
 # open JSON file
-with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Data\transformed_netgen_8_08a.json.json','r') as f:
+with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Data\netgen_8_08a.json','r') as f:
     data = json.load(f)
 
 print(data.keys())
 
+
 # extract nodes and arcs
-nodes_dic = data['nodes']
+nodes= data['nodes']
 arcs = data['arcs']
 
-nodes=nodes_dic.keys()
+
+# Load the start solution
+with open(r"D:\Fub SS 2024\Metaheurisitk\F-F\Data\netgen_8_08a_small_final_network_graph.json", 'r') as f:
+    data = json.load(f)
+
+start_solution = { (arc['start'], arc['end']): arc['flow'] for arc in data['arcs'] }
 
 # CPU / Memory Tracking
 process = psutil.Process(os.getpid())
@@ -39,9 +47,10 @@ def log_core_usage():
 
 
 
-# Problem solution
-max_flow, flow_values = mf_solver.solve_mf(nodes, arcs, 'source', 'sink')
 
+
+# Problem solution
+min_cost, flow_values = mcf_solver_mit_Startl.solve_mcf(nodes, arcs, start_solution)
 
 
 # CPU / Memory stoppen
@@ -56,8 +65,9 @@ logical_cores = psutil.cpu_count(logical=True)
 
 
 
-print(f"Max flow: {max_flow}")
+print(f"Min_cost: {min_cost}")
 print(f"Flow values:{flow_values}")
+
 
 
 print(f"Number of physical cores: {physical_cores}")
@@ -73,19 +83,19 @@ core_usage_data = {
     "physical_cores": physical_cores,
     "logical_cores": logical_cores
 }
+
 ##### save flow values to a JSON file    
 flow_values_str_keys = {str(key): value for key, value in flow_values.items()}
 
 # Save flow_values to a JSON file
-with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Output\neu.json', 'w') as f:
+with open(r'D:\Fub SS 2024\Metaheurisitk\F-F\Gurobi_Min_Cost\Output\Output_mit_Startl\mc_ff_chvatal_neu.json', 'w') as f:
     json.dump(flow_values_str_keys, f)
 
 # Kernauslastung abspeichern
-core_usage_path = r"D:\Fub SS 2024\Metaheurisitk\F-F\Output\Kernelauslastung_MaxFlow_Gurobi.json"
+core_usage_path = r"D:\Fub SS 2024\Metaheurisitk\F-F\Output\Kernelauslastung_MinCost_Gurobi.json"
 with open(core_usage_path, "w") as outfile:
     json.dump(core_usage_data, outfile)
 print(f"Kernauslastung abgespeichert unter {core_usage_path}")
-
 
 ##################################################################################################
 # Draw network
@@ -96,6 +106,10 @@ G = nx.DiGraph()
 G.add_nodes_from(nodes)
 
 # add arcs and capacity 
+for arc in arcs:
+    G.add_edge(arc['from'], arc['to'], capacity=arc['upper_bound'])
+
+# flow values
 for arc in flow_values['arcs']:
     start = arc['start']
     end = arc['end']
@@ -110,10 +124,7 @@ labels = nx.get_edge_attributes(G, 'capacity')  # capacity of each arc
 flow_labels = nx.get_edge_attributes(G, 'flow')  # flow of each arc
 
 # combine capacity and flow values in one label
-
-edge_labels = {(u, v): f"{flow}/ {capacity}" for (u, v), capacity, flow in zip(G.edges(), labels.values(), flow_labels.values())}
-
-
+edge_labels = {(u, v): f"{flow_labels[(u, v)]}/{labels[(u, v)]} " for (u, v) in G.edges()}
 
 nx.draw_networkx_nodes(G, pos)  #draw nodes
 nx.draw_networkx_edges(G, pos)  # draw arcs
@@ -125,3 +136,5 @@ plt.text(1, 0, 'Flow/Capacity', horizontalalignment='right', verticalalignment='
 
 
 plt.show()  # display
+
+

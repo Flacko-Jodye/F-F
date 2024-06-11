@@ -1,6 +1,6 @@
-from network import Network
-from Arc import Arc
-from Nodes import Node
+from lib.network import Network
+from lib.Arc import Arc
+from lib.Nodes import Node
 import json
 import os
 

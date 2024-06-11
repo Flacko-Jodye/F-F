@@ -2,7 +2,7 @@ import ast
 import time
 import os
 import psutil
-from libr import mcf_solver
+from lib.lib_Gurobi_MinCost import mcf_solver
 import json
 import networkx as nx
 import matplotlib.pyplot as plt

@@ -1,3 +1,8 @@
+# Definieren Sie die Variable für den Dateinamen
+import json
+import os
+
+from lib.transformation import transform_data
 import json
 from lib.network import Network
 from lib.Arc import Arc
@@ -7,20 +12,24 @@ import os
 import time
 import math
 
-# Load the JSON data
-# data = json.load(open('C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_start_end.json'))
+input_filename = "chvatal_small.json"
 
-input_path = r'D:\Fub SS 2024\Metaheurisitk\F-F\Trash\irrelational_transform.json'
-# input_path = 'C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_netgen_8_08a.json.json'
+data_original=json.load(open(f"Data/{input_filename}"))
 
-# ChatGPT Ergänzung
-try:
-    with open(input_path, 'r') as infile:
-        data = json.load(infile)
-except FileNotFoundError:
-    print(f"File not found: {input_path}")
-    exit(1)
+print("Data wird transformiert")
+if "sink" not in data_original["nodes"]:
+    transform_data(f"Data/{input_filename}",f"Data/transformed_{input_filename}")
+    data_transformed =json.load(open(f"Data/transformed_{input_filename}"))
+    data=data_transformed
+else:
+    print("Data ist bereits für das FF-Problem")
+    data = data_original	
+print("Data wurde transformiert")
 
+inputpfad_transformation=  f"Data/transformed_{input_filename}"
+######### FF-Ausführung #########
+
+print("Max-Flow-Problem wird gelöst")
 # Netzwerk erstellen
 network = Network()
 
@@ -31,20 +40,6 @@ for node_id in data["nodes"]:
     node = Node(id = node_id, source = source, target = target)
     print(f"Initialized node {node.id}: source={node.source}, target={node.target}")
     network.nodes[node_id] = node
-
-
-"Alte Version"
-# # Knoten hinzufügen
-# for node_data in data["nodes"]:
-#     node = Node(node_data, node_data)
-#     network.addNode(node)
-
-# # Pfade dem Netzwerk hinzufügen
-# for node_id in data["node"]:
-#     source = (node_id == "source")
-#     target = (node_id == "sink")
-#     node = Node(id= node_id, source=source, target=target)
-#     network.nodes[node_id] = node   
 
 
 
@@ -63,11 +58,14 @@ for arc_data in data["arcs"]:
 start_time = time.time()
 
 # Max flow berechnen / # Iteration abspeichern für Visualisierung
-output_dir = "C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/iterations"
+output_dir = "Data/iterations"
 max_flow = FordFulkerson(network, output_dir)
+
 
 # Timer stoppen
 end_time = time.time()
+
+print(f"Iterationen wurden abgespeichert unter {output_dir}")
 
 # Laufzeit berechnen
 running_time = end_time - start_time
@@ -86,7 +84,7 @@ final_network = {
     "arcs": [{"start": arc.start, "end": arc.end, "capacity": arc.capacity, "flow": arc.flow} for arc in network.getArcs()]
 }
 
-output_path = "C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/"
-filename = "chvatal_small_final_network_graph.json"
-with open(os.path.join(output_path, filename), "w") as outfile:
+output_path = f"Data/Maxflow_{input_filename}"
+with open(output_path, "w") as outfile:
     json.dump(final_network, outfile)
+print(f"Maxflow-Ergebnisse abgespeichert unter {output_path}")
