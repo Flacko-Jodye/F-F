@@ -101,11 +101,10 @@ def FordFulkerson_Debug(network, log_core_usage):
             # random.shuffle(neighbors)
 
             # print(f"Iteration {iteration}: Exploring neighbors of {current_node}") # Debugging
-            # # for arc in network.network[current_node]:
             # for arc, residual_capacity in neighbors:
             for arc in network.network[current_node]:
-                print(f"  Considering arc {arc.start} -> {arc.end} with residual capacity {residual_capacity}") # Debugging
                 residual_capacity = arc.capacity - arc.flow
+                # print(f"  Considering arc {arc.start} -> {arc.end} with residual capacity {residual_capacity}") # Debugging
                 if residual_capacity > 0 and arc.end not in visited:
                     new_path = path + [(arc, residual_capacity)]
                     if arc.end == sink:
@@ -114,10 +113,10 @@ def FordFulkerson_Debug(network, log_core_usage):
                         return new_path
                     stack.append((arc.end, new_path))
 
-            # Shuffle the stack to ensure different path selection order
-            print(f"Stack before shuffling: {stack}")
-            random.shuffle(stack)  # Shuffle the stack to ensure random path selection order
-            print(f"Stack after shuffling: {stack}")
+            # # Shuffle the stack to ensure different path selection order
+            # print(f"Stack before shuffling: {stack}")
+            # random.shuffle(stack)  # Shuffle the stack to ensure random path selection order
+            # print(f"Stack after shuffling: {stack}")
 
         print("Kein flussvergrößernder Pfad gefunden")
         return None
@@ -186,7 +185,7 @@ def FordFulkerson_Graph(network, output_dir, log_core_usage):
         os.makedirs(output_dir, exist_ok=True)
         with open(os.path.join(output_dir, f"network_{iteration}.json"), "w") as outfile:
             json.dump(state, outfile)
-    iteration = 0 # Für die Graphenvisualisierung
+    # iteration = 0 # Für die Graphenvisualisierung
 
     iterations = 0 # Iterationen zählen
 
@@ -195,8 +194,8 @@ def FordFulkerson_Graph(network, output_dir, log_core_usage):
     while path is not None:
         flow = min(residual_capacity for arc, residual_capacity in path)
         for arc, _ in path:
-            arc.flow += flow # Fluss des Pfads erhöhen
-            arc.returnArc.flow -= flow  # Rückwärtskante aktualisieren
+            arc.flow += flow 
+            arc.returnArc.flow -= flow
         max_flow += flow
 
         # Iteration des Graphens abspeichern
