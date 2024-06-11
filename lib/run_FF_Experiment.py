@@ -1,10 +1,11 @@
-from network import Network
-from Arc import Arc
-from Nodes import Node
-from WIP_FF_Debug import FordFulkerson_Debug  # Assuming your main functions are in WIP_FF_Debug.py
 import json
 import random
 import matplotlib.pyplot as plt
+from WIP_FF_Debug import FordFulkerson_Debug  # Ensure this import works correctly
+
+from network import Network
+from Arc import Arc
+from Nodes import Node # Ensure this import works correctly
 
 # Function to log core usage (placeholder)
 def log_core_usage():
@@ -21,35 +22,35 @@ def create_network_from_json(file_path):
         is_source = node_id == "source"
         is_sink = node_id == "sink"
         node = Node(node_id, is_source, is_sink)
-        network.addNode(node)
+        network.nodes[node_id] = node
 
     # Add arcs
     for arc in data["arcs"]:
         start, end, capacity = arc["start"], arc["end"], arc["capacity"]
-        arc_obj = Arc(start, end, capacity)
-        network.addArc(arc_obj)
+        network.addArc(start, end, capacity)
 
     return network
 
-def run_experiment(runs=100):
+def run_experiment(runs=10000):
     iterations_list = []
 
     for _ in range(runs):
-        network = create_network_from_json('"C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/Worst_Case_Random.json"')
+        network = create_network_from_json('C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/Worst_Case_Random.json')
         _, iterations, _, _ = FordFulkerson_Debug(network, log_core_usage)
         iterations_list.append(iterations)
 
     return iterations_list
 
 def plot_iterations(iterations_list):
-    plt.hist(iterations_list, bins=range(min(iterations_list), max(iterations_list) + 1), edgecolor='black')
+    plt.hist(iterations_list, bins=range(min(iterations_list), max(iterations_list) + 2), edgecolor='black', align='left')
     plt.title('Distribution of Ford-Fulkerson Algorithm Iterations')
     plt.xlabel('Number of Iterations')
     plt.ylabel('Frequency')
+    plt.xticks(range(min(iterations_list), max(iterations_list) + 2))  # Ensure natural numbers on x-axis
     plt.show()
 
 if __name__ == "__main__":
     random.seed(42)  # For reproducibility
-    iterations_list = run_experiment(100)
+    iterations_list = run_experiment(1000)
     print(f"Iterations for each run: {iterations_list}")
     plot_iterations(iterations_list)
