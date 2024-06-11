@@ -11,11 +11,11 @@ Suchmethode = "DFS" # Hier geben wir an, ob wir DFS oder BFS verwenden wollen,da
 if Suchmethode == "DFS":
     from lib.WIP_FF import FordFulkerson_Debug
 elif Suchmethode == "BFS":
-    from lib.FF_BFS import FordFulkerson_Debug
+    from lib.WIP_BFS import FordFulkerson_Debug
     
 # Andere Datensätze
     # transformed_start_end.json (Chavatal Small)
-    # transformed_netgen_8_08a.json.json
+    # transformed_netgen_8_08a.json
     # transformed_netgen_8_13a.json
 
 input_filename = "transformed_start_end.json"
