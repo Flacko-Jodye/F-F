@@ -15,8 +15,8 @@ Ford-Fulkerson Algorithm (https://brilliant.org/wiki/ford-fulkerson-algorithm/#r
         - Stack für DFS hinzugefügt, um flußvergrößernde Pfade zu erstellen.
 
 Extremfall für unendliche Pfade in Ford-Fulkerson mit irrationalen Kapazität (U. Zwick, The smallest networks on which the Ford–Fulkerson maximum flow procedure may fail to terminate, Theoret. Comput. Sci. 148(1) (1995),165–170. doi:10.1016/0304-3975(95)00022-O.)
-    -Bei der Erstellung der 3. Instanz wurde die Logik mehrerer vom Autor gegebener Beispiele berücksichtigt.(Irrelational_Kapa.json)
-    -Eine spezielle rekursive Sequenz in Ford &Fulkerson verwenden, um sicherzustellen, dass die verbleibende Kapazität niemals auf null abnimmt, was dazu führt, dass der Ford-Fulkerson Algorithmus nicht terminiert.(FF_irrelational_Kapazität.py)
+    -Bei der Erstellung der 3. Instanz wurde die Logik mehrerer vom Autor gegebener Beispiele berücksichtigt.(F-F/Data/Irrelational_Kapa.json)
+    -Eine spezielle rekursive Sequenz in Ford &Fulkerson verwenden, um sicherzustellen, dass die verbleibende Kapazität niemals auf null abnimmt, was dazu führt, dass der Ford-Fulkerson Algorithmus nicht terminiert.(F-F/lib/FF_irrelational_Kapazität.py)
 
 Verwendete Repositories:
 Algorithms (https://github.com/williamfiset/Algorithms/blob/master/src/main/java/com/williamfiset/algorithms/graphtheory/networkflow/FordFulkersonDFSAdjacencyMatrix.java) von williamfiset
