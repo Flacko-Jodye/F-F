@@ -28,4 +28,4 @@ Maxflow-Algorithms (https://github.com/anxiaonong/Maxflow-Algorithms/tree/master
     - Idee des Stacks für DFS
 
 
-Generell wurde Copilot intensiv genutzt, um Code zu ergänzen bzw. zu generieren. Die Visualisierungen wurden durch verschiedene Prompts in ChatGPT durchgeführt.
+Generell wurde Copilot intensiv genutzt, um Code zu ergänzen bzw. zu generieren. Die Visualisierungen wurden durch verschiedene Prompts in ChatGPT durchgeführt. Codes abseits der Algorithmen, so z.B. für die Visualisierungen, wurden anfangs von Copilot generiert und anschließend individuell angepasst durch entsprechende Recherche in den Documentations der Libraries.
