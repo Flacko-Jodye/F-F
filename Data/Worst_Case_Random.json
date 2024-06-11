@@ -1,0 +1,47 @@
+{
+  "nodes": {
+    "source": {},
+    "A": {},
+    "B": {},
+    "C": {},
+    "D": {},
+    "sink": {}
+  },
+  "arcs": [
+    {
+      "start": "source",
+      "end": "A",
+      "capacity": 1000
+    },
+    {
+      "start": "source",
+      "end": "B",
+      "capacity": 1000
+    },
+    {
+      "start": "A",
+      "end": "B",
+      "capacity": 1
+    },
+    {
+      "start": "A",
+      "end": "C",
+      "capacity": 500
+    },
+    {
+      "start": "B",
+      "end": "C",
+      "capacity": 500
+    },
+    {
+      "start": "C",
+      "end": "D",
+      "capacity": 1000
+    },
+    {
+      "start": "D",
+      "end": "sink",
+      "capacity": 1000
+    }
+  ]
+}

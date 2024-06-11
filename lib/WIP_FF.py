@@ -10,6 +10,7 @@ from Arc import Arc
 from Nodes import Node
 import json
 import os
+import random
 
 # s-t-Schnitt ausgeben
 def find_st_cut(network, source):
@@ -61,7 +62,7 @@ def FordFulkerson_Flow(network, log_core_usage):
             arc.returnArc.flow -= flow
         max_flow += flow
 
-        iterations += 1 # Für Extrembeispiel mit 1000 Iterationen
+        iterations += 1 # Löuft er noch?
         if iterations % 1000 == 0:
             print(f"Iteration {iterations}")
             # print(max_flow)
@@ -85,6 +86,7 @@ def FordFulkerson_Debug(network, log_core_usage):
     def flussErhoehen_path(source, sink):
         visited = set()
         stack = [(source, [])]
+        iteration = 0 # Debugging
 
         while stack:
             current_node, path = stack.pop()
@@ -92,7 +94,16 @@ def FordFulkerson_Debug(network, log_core_usage):
                 continue
             visited.add(current_node)
 
-            for arc in network.network[current_node]:
+            # Für 3. Instanz des Extrembeispiels --> Unterschiede zwischen
+            # neighbors = [(arc, arc.capacity - arc.flow) for arc in network.network[current_node] if (arc.capacity - arc.flow) > 0 and arc.end not in visited]
+            neighbors = [(arc, arc.capacity - arc.flow) for arc in network.network[current_node] if arc.end not in visited]
+            # Shufflen um Reihenfolge zu verändern
+            random.shuffle(neighbors)
+
+            print(f"Iteration {iteration}: Exploring neighbors of {current_node}") # Debugging
+            # for arc in network.network[current_node]:
+            for arc, residual_capacity in neighbors:
+                print(f"  Considering arc {arc.start} -> {arc.end} with residual capacity {residual_capacity}") # Debugging
                 residual_capacity = arc.capacity - arc.flow
                 if residual_capacity > 0 and arc.end not in visited:
                     new_path = path + [(arc, residual_capacity)]
@@ -101,6 +112,12 @@ def FordFulkerson_Debug(network, log_core_usage):
                         print(f"Pfad zur Senke gefunden: {path_str}")
                         return new_path
                     stack.append((arc.end, new_path))
+
+            # Shuffle the stack to ensure different path selection order
+            print(f"Stack before shuffling: {stack}")
+            random.shuffle(stack)  # Shuffle the stack to ensure random path selection order
+            print(f"Stack after shuffling: {stack}")
+
         print("Kein flussvergrößernder Pfad gefunden")
         return None
 
@@ -120,6 +137,8 @@ def FordFulkerson_Debug(network, log_core_usage):
 
         # Kernauslastung tracken
         log_core_usage()
+
+        iterations += 1
 
         path = flussErhoehen_path(source.id, sink.id)
 
