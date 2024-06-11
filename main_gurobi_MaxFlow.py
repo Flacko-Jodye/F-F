@@ -9,7 +9,7 @@ from networkx import bipartite_layout
 import copy
 
 
-# open JSON file
+
 input_filename_transformed_data= 'transformed_netgen_8_08a.json.json'
 with open(f'Data/{input_filename_transformed_data}','r') as f:
     data = json.load(f)
