@@ -1,11 +1,12 @@
 import json
 import random
 import matplotlib.pyplot as plt
-from WIP_FF_Debug import FordFulkerson_Debug  # Ensure this import works correctly
+from WIP_FF_Debug import FordFulkerson_Debug
+# from WIP_BFS import FordFulkerson_Debug
 
 from network import Network
 from Arc import Arc
-from Nodes import Node # Ensure this import works correctly
+from Nodes import Node
 
 # Function to log core usage (placeholder)
 def log_core_usage():
@@ -51,6 +52,6 @@ def plot_iterations(iterations_list):
 
 if __name__ == "__main__":
     random.seed(42)  # For reproducibility
-    iterations_list = run_experiment(1000)
+    iterations_list = run_experiment(10000)
     print(f"Iterations for each run: {iterations_list}")
     plot_iterations(iterations_list)

@@ -2,14 +2,16 @@ import json
 from network import Network
 from Arc import Arc
 from Nodes import Node
-from WIP_FF import FordFulkerson_Graph
+# Wählen ob normaler FF-Algorithmus mit DFS oder mit BFS (Edmonds-Karp)
+# from WIP_FF import FordFulkerson_Graph
+from WIP_BFS import FordFulkerson_Graph
 import os
 import time
 import psutil
 
 # Load the JSON data
-# input_path = 'C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_start_end.json'
-input_path = 'C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_netgen_8_08a.json.json'
+input_path = 'C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_start_end.json'
+# input_path = 'C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_netgen_8_08a.json.json'
 # input_path = "C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/NEU_WORSTCASE_Instanz_Anderer_Weg.json"
 
 # ChatGPT Ergänzung
