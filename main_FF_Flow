@@ -25,7 +25,7 @@ elif Suchmethode == "BFS":
     # transformed_netgen_8_08a.json
     # transformed_netgen_8_13a.json
 
-input_filename = "transformed_netgen_8_08a.json.json"
+input_filename = "transformed_netgen_8_08a.json"
 
 data_original=json.load(open(f"Data/{input_filename}"))
 
