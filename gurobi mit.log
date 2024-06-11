@@ -1,0 +1,80 @@
+
+Gurobi 11.0.2 (win64) logging started Tue Jun 11 11:11:40 2024
+
+Set parameter LogFile to value "gurobi mit.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+Gurobi Optimizer version 11.0.2 build v11.0.2rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 8192 rows, 65536 columns and 131072 nonzeros
+Model fingerprint: 0xcebf8a5d
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+04]
+  Bounds range     [1e+00, 3e+03]
+  RHS range        [3e+01, 4e+03]
+Presolve removed 15 rows and 15 columns
+Presolve time: 0.06s
+Presolved: 8177 rows, 65521 columns, 131042 nonzeros
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Ordering time: 0.43s
+
+Barrier performed 0 iterations in 0.52 seconds (0.13 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    4790    1.1849535e+09   0.000000e+00   0.000000e+00      1s
+
+Solved in 4790 iterations and 0.55 seconds (0.11 work units)
+Optimal objective  1.184953451e+09
+
+User-callback calls 68, time in user-callback 0.00 sec
+
+Gurobi 11.0.2 (win64) logging started Tue Jun 11 11:13:20 2024
+
+Set parameter LogFile to value "gurobi mit.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+Gurobi Optimizer version 11.0.2 build v11.0.2rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 8192 rows, 65536 columns and 131072 nonzeros
+Model fingerprint: 0xcebf8a5d
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+04]
+  Bounds range     [1e+00, 3e+03]
+  RHS range        [3e+01, 4e+03]
+Presolve removed 15 rows and 15 columns
+Presolve time: 0.04s
+Presolved: 8177 rows, 65521 columns, 131042 nonzeros
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Ordering time: 0.39s
+
+Barrier performed 0 iterations in 0.45 seconds (0.13 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    4790    1.1849535e+09   0.000000e+00   0.000000e+00      0s
+
+Solved in 4790 iterations and 0.47 seconds (0.11 work units)
+Optimal objective  1.184953451e+09
+
+User-callback calls 64, time in user-callback 0.00 sec

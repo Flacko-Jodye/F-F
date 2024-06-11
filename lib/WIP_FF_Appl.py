@@ -46,9 +46,11 @@ for node_id in data["nodes"]:
 #     node = Node(id= node_id, source=source, target=target)
 #     network.nodes[node_id] = node   
 
+
+
 for arc_data in data["arcs"]:
     capacity = arc_data["capacity"]
-    if isinstance(capacity, str):
+    if isinstance(capacity, str): # weil in Datensaetzen pi und e vorkommen könnten
         if "pi" in capacity or "e" in capacity:
             capacity = eval(capacity, {"pi": math.pi, "e": math.e})
         else:
@@ -83,8 +85,8 @@ final_network = {
     "nodes": {node_id: {"source": node.source, "target": node.target} for node_id, node in network.nodes.items()},
     "arcs": [{"start": arc.start, "end": arc.end, "capacity": arc.capacity, "flow": arc.flow} for arc in network.getArcs()]
 }
-'''
-utput_path = "C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/"
+
+output_path = "C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/"
 filename = "chvatal_small_final_network_graph.json"
 with open(os.path.join(output_path, filename), "w") as outfile:
-    json.dump(final_network, outfile)'''
+    json.dump(final_network, outfile)
