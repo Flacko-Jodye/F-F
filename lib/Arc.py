@@ -2,10 +2,11 @@
     # Vergleich mit https://github.com/williamfiset/Algorithms/blob/master/src/main/java/com/williamfiset/algorithms/graphtheory/networkflow/FordFulkersonDFSAdjacencyMatrix.java 
 
 
-import json
-# Load the data
-with open('C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_start_end.json', 'r') as infile:
-    data = json.load(infile)
+# import json
+# # Load the data
+# with open('C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_start_end.json', 'r') as infile:
+#     data = json.load(infile)
+
 
 class Arc:
     def __init__(self, start, end, capacity):
