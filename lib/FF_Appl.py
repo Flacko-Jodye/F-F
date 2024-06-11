@@ -2,8 +2,8 @@ import json
 from network import Network
 from Arc import Arc
 from Nodes import Node
-# from FF import FordFulkerson
-from FF_BFS import FordFulkerson
+from FF import FordFulkerson
+# from FF_BFS import FordFulkerson
 import os
 import time
 

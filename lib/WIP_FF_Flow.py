@@ -1,12 +1,11 @@
 # Gibt den Max-Flow wieder ohne dass Zwischnschritte geprintet werden oder JSONs zur Visualisierung erstellt werden.
-# Ziel
 
 import json
 from lib.network import Network
 from lib.Arc import Arc
 from lib.Nodes import Node
-# from WIP_FF import FordFulkerson_Flow
-from lib.WIP_BFS import FordFulkerson_Flow
+from WIP_FF import FordFulkerson_Flow
+# from lib.WIP_BFS import FordFulkerson_Flow
 import os
 import time
 import psutil
