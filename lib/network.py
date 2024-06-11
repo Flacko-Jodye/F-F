@@ -9,7 +9,7 @@
 # - Verhinderung von möglichen overflows
 # - visited token (1 oder true) oder in Nodes
 
-from lib.Arc import Arc
+from Arc import Arc
 
 
 class Network:
