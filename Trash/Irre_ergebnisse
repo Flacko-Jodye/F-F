@@ -1,0 +1,197 @@
+
+Pfad zur Senke gefunden: source->6 (Restkapazität: 9) -> 6->4 (Restkapazität: 10.87312731383618) -> 4->sink (Restkapazität: 2)
+Flussvergrößernder Pfad gefunden: source->6 (Restkapazität: 9) -> 6->4 (Restkapazität: 10.87312731383618) -> 4->sink (Restkapazität: 2) mit Fluss 2
+Aktualisierter Fluss auf Kante von source nach 6: 2
+Aktualisierter Fluss auf Rückwärtskante von 6 nach source: -2
+Aktualisierter Fluss auf Kante von 6 nach 4: 2
+Aktualisierter Fluss auf Rückwärtskante von 4 nach 6: -2
+Aktualisierter Fluss auf Kante von 4 nach sink: 2
+Aktualisierter Fluss auf Rückwärtskante von sink nach 4: -2
+Aktueller maximaler Fluss: 2
+Pfad zur Senke gefunden: source->6 (Restkapazität: 7) -> 6->4 (Restkapazität: 8.87312731383618) -> 4->3 (Restkapazität: 9.42477796076938) -> 3->sink (Restkapazität: 16)
+Flussvergrößernder Pfad gefunden: source->6 (Restkapazität: 7) -> 6->4 (Restkapazität: 8.87312731383618) -> 4->3 (Restkapazität: 9.42477796076938) -> 3->sink (Restkapazität: 16) mit Fluss 7
+Aktualisierter Fluss auf Kante von source nach 6: 9
+Aktualisierter Fluss auf Rückwärtskante von 6 nach source: -9
+Aktualisierter Fluss auf Kante von 6 nach 4: 9
+Aktualisierter Fluss auf Rückwärtskante von 4 nach 6: -9
+Aktualisierter Fluss auf Kante von 4 nach 3: 7
+Aktualisierter Fluss auf Rückwärtskante von 3 nach 4: -7
+Aktualisierter Fluss auf Kante von 3 nach sink: 7
+Aktualisierter Fluss auf Rückwärtskante von sink nach 3: -7
+Aktueller maximaler Fluss: 9
+Pfad zur Senke gefunden: source->5 (Restkapazität: 4) -> 5->6 (Restkapazität: 8.154845485377136) -> 6->4 (Restkapazität: 1.8731273138361804) -> 4->3 (Restkapazität: 2.4247779607693793) -> 3->sink (Restkapazität: 9)
+Flussvergrößernder Pfad gefunden: source->5 (Restkapazität: 4) -> 5->6 (Restkapazität: 8.154845485377136) -> 6->4 (Restkapazität: 1.8731273138361804) -> 4->3 (Restkapazität: 2.4247779607693793) -> 3->sink (Restkapazität: 9) mit Fluss 1.8731273138361804
+Aktualisierter Fluss auf Kante von source nach 5: 1.8731273138361804
+Aktualisierter Fluss auf Rückwärtskante von 5 nach source: -1.8731273138361804
+Aktualisierter Fluss auf Kante von 5 nach 6: 1.8731273138361804
+Aktualisierter Fluss auf Rückwärtskante von 6 nach 5: -1.8731273138361804
+Aktualisierter Fluss auf Kante von 6 nach 4: 10.87312731383618
+Aktualisierter Fluss auf Rückwärtskante von 4 nach 6: -10.87312731383618
+Aktualisierter Fluss auf Kante von 4 nach 3: 8.87312731383618
+Aktualisierter Fluss auf Rückwärtskante von 3 nach 4: -8.87312731383618
+Aktualisierter Fluss auf Kante von 3 nach sink: 8.87312731383618
+Aktualisierter Fluss auf Rückwärtskante von sink nach 3: -8.87312731383618
+Aktueller maximaler Fluss: 10.87312731383618
+Pfad zur Senke gefunden: source->5 (Restkapazität: 2.1268726861638196) -> 5->6 (Restkapazität: 6.281718171540955) -> 6->2 (Restkapazität: 8.154845485377136) -> 2->sink (Restkapazität: 5)
+Flussvergrößernder Pfad gefunden: source->5 (Restkapazität: 2.1268726861638196) -> 5->6 (Restkapazität: 6.281718171540955) -> 6->2 (Restkapazität: 8.154845485377136) -> 2->sink (Restkapazität: 5) mit Fluss 2.1268726861638196
+Aktualisierter Fluss auf Kante von source nach 5: 4.0
+Aktualisierter Fluss auf Rückwärtskante von 5 nach source: -4.0
+Aktualisierter Fluss auf Kante von 5 nach 6: 4.0
+Aktualisierter Fluss auf Rückwärtskante von 6 nach 5: -4.0
+Aktualisierter Fluss auf Kante von 6 nach 2: 2.1268726861638196
+Aktualisierter Fluss auf Rückwärtskante von 2 nach 6: -2.1268726861638196
+Aktualisierter Fluss auf Kante von 2 nach sink: 2.1268726861638196
+Aktualisierter Fluss auf Rückwärtskante von sink nach 2: -2.1268726861638196
+Aktueller maximaler Fluss: 13.0
+Pfad zur Senke gefunden: source->1 (Restkapazität: 10) -> 1->5 (Restkapazität: 9.42477796076938) -> 5->6 (Restkapazität: 4.154845485377136) -> 6->2 (Restkapazität: 6.027972799213316) -> 2->sink (Restkapazität: 2.8731273138361804)
+Flussvergrößernder Pfad gefunden: source->1 (Restkapazität: 10) -> 1->5 (Restkapazität: 9.42477796076938) -> 5->6 (Restkapazität: 4.154845485377136) -> 6->2 (Restkapazität: 6.027972799213316) -> 2->sink (Restkapazität: 2.8731273138361804) mit Fluss 2.8731273138361804
+Aktualisierter Fluss auf Kante von source nach 1: 2.8731273138361804
+Aktualisierter Fluss auf Rückwärtskante von 1 nach source: -2.8731273138361804
+Aktualisierter Fluss auf Kante von 1 nach 5: 2.8731273138361804
+Aktualisierter Fluss auf Rückwärtskante von 5 nach 1: -2.8731273138361804
+Aktualisierter Fluss auf Kante von 5 nach 6: 6.87312731383618
+Aktualisierter Fluss auf Rückwärtskante von 6 nach 5: -6.87312731383618
+Aktualisierter Fluss auf Kante von 6 nach 2: 5.0
+Aktualisierter Fluss auf Rückwärtskante von 2 nach 6: -5.0
+Aktualisierter Fluss auf Kante von 2 nach sink: 5.0
+Aktualisierter Fluss auf Rückwärtskante von sink nach 2: -5.0
+Aktueller maximaler Fluss: 15.87312731383618
+Pfad zur Senke gefunden: source->1 (Restkapazität: 7.12687268616382) -> 1->5 (Restkapazität: 6.551650646933199) -> 5->6 (Restkapazität: 1.2817181715409554) -> 6->2 (Restkapazität: 3.1548454853771357) -> 2->3 (Restkapazität: 8.154845485377136) -> 3->sink (Restkapazität: 7.12687268616382)
+Flussvergrößernder Pfad gefunden: source->1 (Restkapazität: 7.12687268616382) -> 1->5 (Restkapazität: 6.551650646933199) -> 5->6 (Restkapazität: 1.2817181715409554) -> 6->2 (Restkapazität: 3.1548454853771357) -> 2->3 (Restkapazität: 8.154845485377136) -> 3->sink (Restkapazität: 7.12687268616382) mit Fluss 1.2817181715409554
+Aktualisierter Fluss auf Kante von source nach 1: 4.154845485377136
+Aktualisierter Fluss auf Rückwärtskante von 1 nach source: -4.154845485377136
+Aktualisierter Fluss auf Kante von 1 nach 5: 4.154845485377136
+Aktualisierter Fluss auf Rückwärtskante von 5 nach 1: -4.154845485377136
+Aktualisierter Fluss auf Kante von 5 nach 6: 8.154845485377136
+Aktualisierter Fluss auf Rückwärtskante von 6 nach 5: -8.154845485377136
+Aktualisierter Fluss auf Kante von 6 nach 2: 6.281718171540955
+Aktualisierter Fluss auf Rückwärtskante von 2 nach 6: -6.281718171540955
+Aktualisierter Fluss auf Kante von 2 nach 3: 1.2817181715409554
+Aktualisierter Fluss auf Rückwärtskante von 3 nach 2: -1.2817181715409554
+Aktualisierter Fluss auf Kante von 3 nach sink: 10.154845485377136
+Aktualisierter Fluss auf Rückwärtskante von sink nach 3: -10.154845485377136
+Aktueller maximaler Fluss: 17.154845485377137
+Pfad zur Senke gefunden: source->1 (Restkapazität: 5.845154514622864) -> 1->5 (Restkapazität: 5.269932475392244) -> 5->4 (Restkapazität: 9.42477796076938) -> 4->6 (Restkapazität: 10.87312731383618) -> 6->2 (Restkapazität: 1.8731273138361804) -> 2->3 (Restkapazität: 6.87312731383618) -> 3->sink (Restkapazität: 5.845154514622864)
+Flussvergrößernder Pfad gefunden: source->1 (Restkapazität: 5.845154514622864) -> 1->5 (Restkapazität: 5.269932475392244) -> 5->4 (Restkapazität: 9.42477796076938) -> 4->6 (Restkapazität: 10.87312731383618) -> 6->2 (Restkapazität: 1.8731273138361804) -> 2->3 (Restkapazität: 6.87312731383618) -> 3->sink (Restkapazität: 5.845154514622864) mit Fluss 1.8731273138361804  
+Aktualisierter Fluss auf Kante von source nach 1: 6.027972799213316
+Aktualisierter Fluss auf Rückwärtskante von 1 nach source: -6.027972799213316
+Aktualisierter Fluss auf Kante von 1 nach 5: 6.027972799213316
+Aktualisierter Fluss auf Rückwärtskante von 5 nach 1: -6.027972799213316
+Aktualisierter Fluss auf Kante von 5 nach 4: 1.8731273138361804
+Aktualisierter Fluss auf Rückwärtskante von 4 nach 5: -1.8731273138361804
+Aktualisierter Fluss auf Kante von 4 nach 6: -9.0
+Aktualisierter Fluss auf Rückwärtskante von 6 nach 4: 9.0
+Aktualisierter Fluss auf Kante von 6 nach 2: 8.154845485377136
+Aktualisierter Fluss auf Rückwärtskante von 2 nach 6: -8.154845485377136
+Aktualisierter Fluss auf Kante von 2 nach 3: 3.1548454853771357
+Aktualisierter Fluss auf Rückwärtskante von 3 nach 2: -3.1548454853771357
+Aktualisierter Fluss auf Kante von 3 nach sink: 12.027972799213316
+Aktualisierter Fluss auf Rückwärtskante von sink nach 3: -12.027972799213316
+Aktueller maximaler Fluss: 19.027972799213316
+Pfad zur Senke gefunden: source->1 (Restkapazität: 3.972027200786684) -> 1->5 (Restkapazität: 3.3968051615560633) -> 5->4 (Restkapazität: 7.551650646933199) -> 4->3 (Restkapazität: 0.551650646933199) -> 3->sink (Restkapazität: 3.972027200786684) 
+Flussvergrößernder Pfad gefunden: source->1 (Restkapazität: 3.972027200786684) -> 1->5 (Restkapazität: 3.3968051615560633) -> 5->4 (Restkapazität: 7.551650646933199) -> 4->3 (Restkapazität: 0.551650646933199) -> 3->sink (Restkapazität: 3.972027200786684) mit Fluss 0.551650646933199
+Aktualisierter Fluss auf Kante von source nach 1: 6.579623446146515
+Aktualisierter Fluss auf Rückwärtskante von 1 nach source: -6.579623446146515
+Aktualisierter Fluss auf Kante von 1 nach 5: 6.579623446146515
+Aktualisierter Fluss auf Rückwärtskante von 5 nach 1: -6.579623446146515
+Aktualisierter Fluss auf Kante von 5 nach 4: 2.4247779607693793
+Aktualisierter Fluss auf Rückwärtskante von 4 nach 5: -2.4247779607693793
+Aktualisierter Fluss auf Kante von 4 nach 3: 9.42477796076938
+Aktualisierter Fluss auf Rückwärtskante von 3 nach 4: -9.42477796076938
+Aktualisierter Fluss auf Kante von 3 nach sink: 12.579623446146515
+Aktualisierter Fluss auf Rückwärtskante von sink nach 3: -12.579623446146515
+Aktueller maximaler Fluss: 19.579623446146513
+Pfad zur Senke gefunden: source->1 (Restkapazität: 3.420376553853485) -> 1->5 (Restkapazität: 2.8451545146228643) -> 5->4 (Restkapazität: 7.0) -> 4->2 (Restkapazität: 10.87312731383618) -> 2->3 (Restkapazität: 5.0) -> 3->sink (Restkapazität: 3.420376553853485)
+Flussvergrößernder Pfad gefunden: source->1 (Restkapazität: 3.420376553853485) -> 1->5 (Restkapazität: 2.8451545146228643) -> 5->4 (Restkapazität: 7.0) -> 4->2 (Restkapazität: 10.87312731383618) -> 2->3 (Restkapazität: 5.0) -> 3->sink (Restkapazität: 3.420376553853485) mit Fluss 2.8451545146228643
+Aktualisierter Fluss auf Kante von source nach 1: 9.42477796076938
+Aktualisierter Fluss auf Rückwärtskante von 1 nach source: -9.42477796076938
+Aktualisierter Fluss auf Kante von 1 nach 5: 9.42477796076938
+Aktualisierter Fluss auf Rückwärtskante von 5 nach 1: -9.42477796076938
+Aktualisierter Fluss auf Kante von 5 nach 4: 5.269932475392244
+Aktualisierter Fluss auf Rückwärtskante von 4 nach 5: -5.269932475392244
+Aktualisierter Fluss auf Kante von 4 nach 2: 2.8451545146228643
+Aktualisierter Fluss auf Rückwärtskante von 2 nach 4: -2.8451545146228643
+Aktualisierter Fluss auf Kante von 2 nach 3: 6.0
+Aktualisierter Fluss auf Rückwärtskante von 3 nach 2: -6.0
+Aktualisierter Fluss auf Kante von 3 nach sink: 15.42477796076938
+Aktualisierter Fluss auf Rückwärtskante von sink nach 3: -15.42477796076938
+Aktueller maximaler Fluss: 22.424777960769376
+Pfad zur Senke gefunden: source->1 (Restkapazität: 0.5752220392306207) -> 1->3 (Restkapazität: 9.42477796076938) -> 3->sink (Restkapazität: 0.5752220392306207)
+Flussvergrößernder Pfad gefunden: source->1 (Restkapazität: 0.5752220392306207) -> 1->3 (Restkapazität: 9.42477796076938) -> 3->sink (Restkapazität: 0.5752220392306207) mit Fluss 0.5752220392306207
+Aktualisierter Fluss auf Kante von source nach 1: 10.0
+Aktualisierter Fluss auf Rückwärtskante von 1 nach source: -10.0
+Aktualisierter Fluss auf Kante von 1 nach 3: 0.5752220392306207
+Aktualisierter Fluss auf Rückwärtskante von 3 nach 1: -0.5752220392306207
+Aktualisierter Fluss auf Kante von 3 nach sink: 16.0
+Aktualisierter Fluss auf Rückwärtskante von sink nach 3: -16.0
+Aktueller maximaler Fluss: 22.999999999999996
+Kein flussvergrößernder Pfad gefunden
+Endgültiger maximaler Fluss: 22.999999999999996
+Max flow: 22.999999999999996
+Laufzeit: 0.024847030639648438 Sekunden
+
+
+
+
+
+
+Pfad zur Senke gefunden: source->1 (Restkapazität: 10) -> 1->2 (Restkapazität: 3.141592653589793) -> 2->sink (Restkapazität: 5)
+Flussvergrößernder Pfad gefunden: source->1 (Restkapazität: 10) -> 1->2 (Restkapazität: 3.141592653589793) -> 2->sink (Restkapazität: 5) mit Fluss 3.141592653589793
+Aktualisierter Fluss auf Kante von source nach 1: 3.141592653589793
+Aktualisierter Fluss auf Rückwärtskante von 1 nach source: -3.141592653589793
+Aktualisierter Fluss auf Kante von 1 nach 2: 3.141592653589793
+Aktualisierter Fluss auf Rückwärtskante von 2 nach 1: -3.141592653589793
+Aktualisierter Fluss auf Kante von 2 nach sink: 3.141592653589793
+Aktualisierter Fluss auf Rückwärtskante von sink nach 2: -3.141592653589793
+Aktueller maximaler Fluss: 3.141592653589793
+Pfad zur Senke gefunden: source->1 (Restkapazität: 6.858407346410207) -> 1->3 (Restkapazität: 9.42477796076938) -> 3->sink (Restkapazität: 16)
+Flussvergrößernder Pfad gefunden: source->1 (Restkapazität: 6.858407346410207) -> 1->3 (Restkapazität: 9.42477796076938) -> 3->sink (Restkapazität: 16) mit Fluss 6.858407346410207
+Aktualisierter Fluss auf Kante von source nach 1: 10.0
+Aktualisierter Fluss auf Rückwärtskante von 1 nach source: -10.0
+Aktualisierter Fluss auf Kante von 1 nach 3: 6.858407346410207
+Aktualisierter Fluss auf Rückwärtskante von 3 nach 1: -6.858407346410207
+Aktualisierter Fluss auf Kante von 3 nach sink: 6.858407346410207
+Aktualisierter Fluss auf Rückwärtskante von sink nach 3: -6.858407346410207
+Aktueller maximaler Fluss: 10.0
+Pfad zur Senke gefunden: source->5 (Restkapazität: 4) -> 5->3 (Restkapazität: 10.87312731383618) -> 3->sink (Restkapazität: 9.141592653589793)
+Flussvergrößernder Pfad gefunden: source->5 (Restkapazität: 4) -> 5->3 (Restkapazität: 10.87312731383618) -> 3->sink (Restkapazität: 9.141592653589793) mit Fluss 4
+Aktualisierter Fluss auf Kante von source nach 5: 4
+Aktualisierter Fluss auf Rückwärtskante von 5 nach source: -4
+Aktualisierter Fluss auf Kante von 5 nach 3: 4
+Aktualisierter Fluss auf Rückwärtskante von 3 nach 5: -4
+Aktualisierter Fluss auf Kante von 3 nach sink: 10.858407346410207
+Aktualisierter Fluss auf Rückwärtskante von sink nach 3: -10.858407346410207
+Aktueller maximaler Fluss: 14.0
+Pfad zur Senke gefunden: source->6 (Restkapazität: 9) -> 6->2 (Restkapazität: 8.154845485377136) -> 2->sink (Restkapazität: 1.8584073464102069)
+Flussvergrößernder Pfad gefunden: source->6 (Restkapazität: 9) -> 6->2 (Restkapazität: 8.154845485377136) -> 2->sink (Restkapazität: 1.8584073464102069) mit Fluss 1.8584073464102069
+Aktualisierter Fluss auf Kante von source nach 6: 1.8584073464102069
+Aktualisierter Fluss auf Rückwärtskante von 6 nach source: -1.8584073464102069
+Aktualisierter Fluss auf Kante von 6 nach 2: 1.8584073464102069
+Aktualisierter Fluss auf Rückwärtskante von 2 nach 6: -1.8584073464102069
+Aktualisierter Fluss auf Kante von 2 nach sink: 5.0
+Aktualisierter Fluss auf Rückwärtskante von sink nach 2: -5.0
+Aktueller maximaler Fluss: 15.858407346410207
+Pfad zur Senke gefunden: source->6 (Restkapazität: 7.141592653589793) -> 6->4 (Restkapazität: 10.87312731383618) -> 4->sink (Restkapazität: 2)
+Flussvergrößernder Pfad gefunden: source->6 (Restkapazität: 7.141592653589793) -> 6->4 (Restkapazität: 10.87312731383618) -> 4->sink (Restkapazität: 2) mit Fluss 2
+Aktualisierter Fluss auf Kante von source nach 6: 3.858407346410207
+Aktualisierter Fluss auf Rückwärtskante von 6 nach source: -3.858407346410207
+Aktualisierter Fluss auf Kante von 6 nach 4: 2
+Aktualisierter Fluss auf Rückwärtskante von 4 nach 6: -2
+Aktualisierter Fluss auf Kante von 4 nach sink: 2
+Aktualisierter Fluss auf Rückwärtskante von sink nach 4: -2
+Aktueller maximaler Fluss: 17.858407346410207
+Pfad zur Senke gefunden: source->6 (Restkapazität: 5.141592653589793) -> 6->2 (Restkapazität: 6.296438138966929) -> 2->3 (Restkapazität: 8.154845485377136) -> 3->sink (Restkapazität: 5.141592653589793)
+Flussvergrößernder Pfad gefunden: source->6 (Restkapazität: 5.141592653589793) -> 6->2 (Restkapazität: 6.296438138966929) -> 2->3 (Restkapazität: 8.154845485377136) -> 3->sink (Restkapazität: 5.141592653589793) mit Fluss 5.141592653589793        
+Aktualisierter Fluss auf Kante von source nach 6: 9.0
+Aktualisierter Fluss auf Rückwärtskante von 6 nach source: -9.0
+Aktualisierter Fluss auf Kante von 6 nach 2: 7.0
+Aktualisierter Fluss auf Rückwärtskante von 2 nach 6: -7.0
+Aktualisierter Fluss auf Kante von 2 nach 3: 5.141592653589793
+Aktualisierter Fluss auf Rückwärtskante von 3 nach 2: -5.141592653589793
+Aktualisierter Fluss auf Kante von 3 nach sink: 16.0
+Aktualisierter Fluss auf Rückwärtskante von sink nach 3: -16.0
+Aktueller maximaler Fluss: 23.0
+Kein flussvergrößernder Pfad gefunden
+Endgültiger maximaler Fluss: 23.0
+Max flow: 23.0
+Laufzeit: 0.01340794563293457 Sekunden

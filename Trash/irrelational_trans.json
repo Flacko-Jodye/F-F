@@ -1,0 +1,99 @@
+{
+    "nodes": {
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "5": {},
+        "6": {},
+        "source": {},
+        "sink": {}
+    },
+    "arcs": [
+        {
+            "start": "source",
+            "end": "1",
+            "capacity": 10
+        },
+        {
+            "start": "2",
+            "end": "sink",
+            "capacity": 5
+        },
+        {
+            "start": "3",
+            "end": "sink",
+            "capacity": 16
+        },
+        {
+            "start": "4",
+            "end": "sink",
+            "capacity": 2
+        },
+        {
+            "start": "source",
+            "end": "5",
+            "capacity": 4
+        },
+        {
+            "start": "source",
+            "end": "6",
+            "capacity": 9
+        },
+        {
+            "start": "1",
+            "end": "2",
+            "capacity": "pi"
+        },
+        {
+            "start": "1",
+            "end": "3",
+            "capacity": "3*pi"
+        },
+        {
+            "start": "1",
+            "end": "5",
+            "capacity": "3*pi"
+        },
+        {
+            "start": "2",
+            "end": "3",
+            "capacity": "3*e"
+        },
+        {
+            "start": "4",
+            "end": "2",
+            "capacity": "4*e"
+        },
+        {
+            "start": "4",
+            "end": "3",
+            "capacity": "3*pi"
+        },
+        {
+            "start": "5",
+            "end": "3",
+            "capacity": "4*e"
+        },
+        {
+            "start": "5",
+            "end": "4",
+            "capacity": "3*pi"
+        },
+        {
+            "start": "5",
+            "end": "6",
+            "capacity": "3*e"
+        },
+        {
+            "start": "6",
+            "end": "2",
+            "capacity": "3*e"
+        },
+        {
+            "start": "6",
+            "end": "4",
+            "capacity": "4*e"
+        }
+    ]
+}

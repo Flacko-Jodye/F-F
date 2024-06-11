@@ -1,0 +1,57 @@
+{
+    "nodes": {
+        "1": {},
+        "2": {},
+        "3": {},
+        "4": {},
+        "source": {},
+        "sink": {}
+    },
+    "arcs": [
+        {
+            "start": "source",
+            "end": "1",
+            "capacity": 4
+        },
+        {
+            "start": "2",
+            "end": "sink",
+            "capacity": 4
+        },
+        {
+            "start": "source",
+            "end": "3",
+            "capacity": 4
+        },
+        {
+            "start": "source",
+            "end": "4",
+            "capacity": 4
+        },
+        {
+            "start": "1",
+            "end": "sink",
+            "capacity": 4
+        },
+        {
+            "start": "4",
+            "end": "sink",
+            "capacity":4
+        },
+        {
+            "start": "1",
+            "end": "2",
+            "capacity": "e"
+        },
+        {
+            "start": "3",
+            "end": "2",
+            "capacity": 1
+        },
+        {
+            "start": "3",
+            "end": "4",
+            "capacity": 1
+        }
+    ]
+}
