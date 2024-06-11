@@ -97,7 +97,7 @@ def FordFulkerson_Debug(network, log_core_usage):
 
             "Um Randomisierung für die 3. Instanz zu testen, Kommentare entfernen und Zeile 107 auskommentieren"
             # # Für 3. Instanz des Extrembeispiels --> Unterschiede zwischen
-            # # neighbors = [(arc, arc.capacity - arc.flow) for arc in network.network[current_node] if (arc.capacity - arc.flow) > 0 and arc.end not in visited]
+            # neighbors = [(arc, arc.capacity - arc.flow) for arc in network.network[current_node] if (arc.capacity - arc.flow) > 0 and arc.end not in visited]
             # neighbors = [(arc, arc.capacity - arc.flow) for arc in network.network[current_node] if arc.end not in visited]
             # # Shufflen um Reihenfolge zu verändern
             # random.shuffle(neighbors)
