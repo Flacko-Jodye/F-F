@@ -4,10 +4,7 @@ import os
 import psutil
 from lib.Nodes import Node
 import time
-from lib.settings import Settings
-from lib.networkInput import NetworkInput
 from lib.network import Network
-from lib import helper
 from lib. transformation import transform_data
 
 Suchmethode = "DFS" # Hier geben wir an, ob wir DFS oder BFS verwenden wollen,damit der richtige Algorithmus aufgerufen wird
@@ -16,8 +13,12 @@ if Suchmethode == "DFS":
 elif Suchmethode == "BFS":
     from lib.FF_BFS import FordFulkerson_Debug
     
-    
-input_filename = "chvatal_small.json"
+# Andere Datensätze
+    # transformed_start_end.json (Chavatal Small)
+    # transformed_netgen_8_08a.json.json
+    # transformed_netgen_8_13a.json
+
+input_filename = "transformed_start_end.json"
 
 data_original=json.load(open(f"Data/{input_filename}"))
 

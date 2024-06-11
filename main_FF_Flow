@@ -19,7 +19,12 @@ if Suchmethode == "DFS":
 elif Suchmethode == "BFS":
     from lib.FF_BFS import FordFulkerson_Flow
 
-input_filename = "chvatal_small.json"
+# Andere Datensätze
+    # transformed_start_end.json (Chavatal Small)
+    # transformed_netgen_8_08a.json.json
+    # transformed_netgen_8_13a.json
+
+input_filename = "transformed_start_end.json"
 
 data_original=json.load(open(f"Data/{input_filename}"))
 
