@@ -1,6 +1,6 @@
 # Generelle Struktur nah an: https://brilliant.org/wiki/ford-fulkerson-algorithm/#residual-graphs sowie https://github.com/williamfiset/Algorithms/blob/master/src/main/java/com/williamfiset/algorithms/graphtheory/networkflow/FordFulkersonDFSAdjacencyMatrix.java
 # Ergänzungen zum Schluss von ChatGPT (s. letzte Zeilen)
-from Arc import Arc
+from lib.Arc import Arc
 
 class Network:
     def __init__(self):
