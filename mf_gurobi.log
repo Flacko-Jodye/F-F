@@ -184,3 +184,166 @@ Solved in 7 iterations and 0.01 seconds (0.00 work units)
 Optimal objective  2.200000000e+01
 
 User-callback calls 38, time in user-callback 0.01 sec
+
+Gurobi 11.0.2 (win64) logging started Tue Jun 11 02:48:38 2024
+
+Set parameter LogFile to value "mf_gurobi.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+
+Gurobi 11.0.2 (win64) logging started Tue Jun 11 02:51:34 2024
+
+Set parameter LogFile to value "mf_gurobi.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+
+Gurobi 11.0.2 (win64) logging started Tue Jun 11 02:57:41 2024
+
+Set parameter LogFile to value "mf_gurobi.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+Gurobi Optimizer version 11.0.2 build v11.0.2rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 8 rows, 17 columns and 28 nonzeros
+Model fingerprint: 0xc8812966
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 2e+01]
+  RHS range        [0e+00, 0e+00]
+Presolve removed 2 rows and 1 columns
+Presolve time: 0.01s
+Presolved: 6 rows, 16 columns, 27 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.2000000e+01   2.499000e+01   0.000000e+00      0s
+       7    2.2000000e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 7 iterations and 0.01 seconds (0.00 work units)
+Optimal objective  2.200000000e+01
+
+Gurobi 11.0.2 (win64) logging started Tue Jun 11 03:02:19 2024
+
+Set parameter LogFile to value "mf_gurobi.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+Gurobi Optimizer version 11.0.2 build v11.0.2rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 258 rows, 2080 columns and 4128 nonzeros
+Model fingerprint: 0x254f9617
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+03]
+  RHS range        [0e+00, 0e+00]
+Presolve removed 2 rows and 16 columns
+Presolve time: 0.00s
+Presolved: 256 rows, 2064 columns, 4112 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.6000000e+04   2.283700e+04   0.000000e+00      0s
+     434    1.6000000e+04   0.000000e+00   0.000000e+00      0s
+
+Solved in 434 iterations and 0.02 seconds (0.01 work units)
+Optimal objective  1.600000000e+04
+
+Gurobi 11.0.2 (win64) logging started Tue Jun 11 03:32:16 2024
+
+Set parameter LogFile to value "mf_gurobi.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+
+Gurobi 11.0.2 (win64) logging started Tue Jun 11 03:32:32 2024
+
+Set parameter LogFile to value "mf_gurobi.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+Gurobi Optimizer version 11.0.2 build v11.0.2rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 258 rows, 2080 columns and 4128 nonzeros
+Model fingerprint: 0x254f9617
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+03]
+  RHS range        [0e+00, 0e+00]
+Presolve removed 2 rows and 16 columns
+Presolve time: 0.01s
+Presolved: 256 rows, 2064 columns, 4112 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.6000000e+04   2.283700e+04   0.000000e+00      0s
+     434    1.6000000e+04   0.000000e+00   0.000000e+00      0s
+
+Solved in 434 iterations and 0.02 seconds (0.01 work units)
+Optimal objective  1.600000000e+04
+
+Gurobi 11.0.2 (win64) logging started Tue Jun 11 03:32:51 2024
+
+Set parameter LogFile to value "mf_gurobi.log"
+Set parameter DisplayInterval to value 1
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+Gurobi Optimizer version 11.0.2 build v11.0.2rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 8194 rows, 65718 columns and 131254 nonzeros
+Model fingerprint: 0x4f8842aa
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 4e+03]
+  RHS range        [0e+00, 0e+00]
+Presolve removed 2 rows and 91 columns
+Presolve time: 0.05s
+Presolved: 8192 rows, 65627 columns, 131163 nonzeros
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Ordering time: 0.99s
+
+Barrier statistics:
+ AA' NZ     : 6.550e+04
+ Factor NZ  : 1.382e+07 (roughly 140 MB of memory)
+ Factor Ops : 4.600e+10 (roughly 1 second per iteration)
+ Threads    : 3
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   2.55270951e+05  3.03393335e+07  3.93e+04 1.54e-01  1.94e+03     2s
+   1   9.72989528e+04  2.10097412e+07  2.76e+03 8.88e-16  2.56e+02     2s
+   2   8.88062040e+04  4.27054225e+06  1.23e+02 3.66e-15  3.33e+01     3s
+   3   9.07347625e+04  1.89982105e+05  7.17e-01 8.88e-16  7.56e-01     3s
+   4   9.09957428e+04  9.11495902e+04  1.40e-02 3.33e-16  1.16e-03     4s
+   5   9.09999957e+04  9.10001497e+04  4.15e-03 2.22e-16  1.16e-06     4s
+   6   9.10000000e+04  9.10000001e+04  4.94e-03 2.22e-16  1.16e-09     5s
+   7   9.10000000e+04  9.10000000e+04  2.64e-04 2.63e-16  1.16e-12     5s
+
+Barrier performed 7 iterations in 5.32 seconds (5.25 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   14218    9.1000000e+04   0.000000e+00   0.000000e+00      5s
+
+Solved in 14218 iterations and 5.36 seconds (3.96 work units)
+Optimal objective  9.100000000e+04

@@ -2,14 +2,15 @@ import json
 from network import Network
 from Arc import Arc
 from Nodes import Node
-from FF import FordFulkerson
+from FF_BFS import FordFulkerson
 import os
 import time
+import math
 
 # Load the JSON data
 # data = json.load(open('C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_start_end.json'))
 
-input_path = 'C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_start_end.json'
+input_path = r'D:\Fub SS 2024\Metaheurisitk\F-F\Trash\irrelational_transform.json'
 # input_path = 'C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/transformed_netgen_8_08a.json.json'
 
 # ChatGPT Ergänzung
@@ -46,8 +47,16 @@ for node_id in data["nodes"]:
 #     network.nodes[node_id] = node   
 
 for arc_data in data["arcs"]:
-    network.addArc(arc_data["start"], arc_data["end"], arc_data["capacity"])
-
+    capacity = arc_data["capacity"]
+    if isinstance(capacity, str):
+        if "pi" in capacity or "e" in capacity:
+            capacity = eval(capacity, {"pi": math.pi, "e": math.e})
+        else:
+            try:
+                capacity = int(capacity)
+            except ValueError:
+                capacity = float(capacity)
+    network.addArc(arc_data["start"], arc_data["end"], capacity)
 # Timer starten
 start_time = time.time()
 
@@ -74,8 +83,8 @@ final_network = {
     "nodes": {node_id: {"source": node.source, "target": node.target} for node_id, node in network.nodes.items()},
     "arcs": [{"start": arc.start, "end": arc.end, "capacity": arc.capacity, "flow": arc.flow} for arc in network.getArcs()]
 }
-
-output_path = "C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/"
+'''
+utput_path = "C:/Users/fabia/OneDrive/Dokumente/Master_FU/Semester 2/Netzwerke/F&F/F-F/Data/"
 filename = "chvatal_small_final_network_graph.json"
 with open(os.path.join(output_path, filename), "w") as outfile:
-    json.dump(final_network, outfile)
+    json.dump(final_network, outfile)'''
