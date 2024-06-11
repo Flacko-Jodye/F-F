@@ -3,9 +3,13 @@
 Dieses Projekt orientiert sich zu großen Teilen an den folgenden Quellen:
 
 Ford-Fulkerson Algorithm (https://brilliant.org/wiki/ford-fulkerson-algorithm/#residual-graphs) von Alex Chumbley, Karleigh Moore, Tim Hor, Jimin Khim und Eli Ross
+    
     - Die generelle Struktur des F&F baut auf der Struktur der Autoren auf.
+    
     - Verschiedene Anpassungen wurden jedoch vorgenommen:
+    
         - addEdge() wurde nicht übernommen.
+    
         - Es wurden mehrere Modi hinzugefügt, um verschiedenen Aufgabenstellungen gerecht zu werden:
             - Flow --> Max-Flow Berechnung in kürzest möglicher Zeit
             - Debug --> Detaillierte Ausgabe der ausgeführten Aktionen des Algorithmus. Dieser Modus dient für ein besseres Verständnis.
