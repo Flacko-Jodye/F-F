@@ -13,19 +13,9 @@ import math
 
 input_filename = "Irrational_Kapa.json"
 
-data_original=json.load(open(f"Data/{input_filename}"))
+data=json.load(open(f"Data/{input_filename}"))
 
-print("Data wird transformiert")
-if "sink" not in data_original["nodes"]:
-    transform_data(f"Data/{input_filename}",f"Data/transformed_{input_filename}")
-    data_transformed =json.load(open(f"Data/transformed_{input_filename}"))
-    data=data_transformed
-else:
-    print("Data ist bereits für das FF-Problem")
-    data = data_original	
-print("Data wurde transformiert")
 
-inputpfad_transformation=  f"Data/transformed_{input_filename}"
 
 
 ######### FF-Ausführung #########
@@ -85,7 +75,7 @@ final_network = {
     "arcs": [{"start": arc.start, "end": arc.end, "capacity": arc.capacity, "flow": arc.flow} for arc in network.getArcs()]
 }
 
-output_path = f"Data/Maxflow_{input_filename}"
-with open(output_path, "w") as outfile:
-    json.dump(final_network, outfile)
-print(f"Maxflow-Ergebnisse abgespeichert unter {output_path}")
+# output_path = f"Data/Maxflow_{input_filename}"
+# with open(output_path, "w") as outfile:
+#     json.dump(final_network, outfile)
+# print(f"Maxflow-Ergebnisse abgespeichert unter {output_path}")

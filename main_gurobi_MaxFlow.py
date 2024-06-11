@@ -9,7 +9,7 @@ from networkx import bipartite_layout
 import copy
 
 
-input_filename_transformed_data= 'chvatal_small2.json'
+input_filename_transformed_data= 'transformed_start_end.json'
 with open(f'Data/{input_filename_transformed_data}','r') as f:
     data = json.load(f)
 
@@ -77,7 +77,7 @@ core_usage_data = {
 flow_values_str_keys = {str(key): value for key, value in flow_values.items()}
 
 # Save flow_values to a JSON file
-with open(f'Data/{input_filename_transformed_data}', 'w') as f:
+with open(f'Data/MaxFlow{input_filename_transformed_data}', 'w') as f:
     json.dump(flow_values_str_keys, f)
 print(f"Flow values abgespeichert unter Data/{input_filename_transformed_data}")
 # Kernauslastung abspeichern
